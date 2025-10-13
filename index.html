@@ -12,6 +12,7 @@
             --accent: #e74c3c;
             --light: #ecf0f1;
             --dark: #2c3e50;
+            --gray: #95a5a6;
         }
 
         * {
@@ -19,6 +20,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -77,6 +82,7 @@
 
         .btn:hover {
             background-color: var(--primary);
+            transform: translateY(-3px);
         }
 
         /* Header */
@@ -117,6 +123,10 @@
             font-weight: 500;
         }
 
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -128,6 +138,7 @@
         .hero h1 {
             color: white;
             font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
         .profile-img {
@@ -137,6 +148,7 @@
             object-fit: cover;
             border: 5px solid white;
             margin-bottom: 30px;
+            background-color: #ddd; /* Couleur de fond temporaire */
         }
 
         .social-links {
@@ -147,6 +159,168 @@
             display: inline-block;
             margin: 0 10px;
             color: white;
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            color: var(--light);
+            transform: translateY(-5px);
+        }
+
+        /* Education Section */
+        .education {
+            background-color: #f5f7fa;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #eee; /* Temporaire */
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #f5f7fa;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact h2::after {
+            background-color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
             font-size: 1.5rem;
         }
 
@@ -164,6 +338,20 @@
             .hero h1 {
                 font-size: 2rem;
             }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
         }
     </style>
 </head>
@@ -176,6 +364,7 @@
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#formation">Formation</a></li>
                     <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -184,18 +373,166 @@
 
     <section id="accueil" class="hero">
         <div class="container">
-            <img src="profile.jpg" alt="Serine Bensalem" class="profile-img">
+            <div class="profile-img"></div>
             <h1>Serine Bensalem</h1>
             <p>Étudiante en Master 2 Systèmes Automatiques Mobiles à l'Université d'Évry (Paris-Saclay), passionnée par la robotique, la commande et l'intelligence artificielle.</p>
-            <p>Diplômée de l'École Nationale Polytechnique d'Alger et actuellement en double diplôme à l'Université Paris-Saclay.</p>
+            <p>Diplômée de l'École Nationale Polytechnique d'Alger et actuellement en double diplôme à l'Université Paris-Saclay, j'ai développé un fort intérêt pour les systèmes autonomes, la vision, le contrôle non linéaire et la robotique collaborative.</p>
             <div class="hero-buttons">
-                <a href="cv.pdf" class="btn">Télécharger mon CV</a>
+                <a href="#" class="btn">Télécharger mon CV</a>
                 <a href="#contact" class="btn">Me contacter</a>
             </div>
             <div class="social-links">
                 <a href="mailto:serina.bensalem@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formation -->
+    <section id="formation" class="education">
+        <div class="container">
+            <h2>Formation et Parcours Académique</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - 2025</div>
+                        <h3>Master 2 - Systèmes Automatiques Mobiles</h3>
+                        <p>Université Paris-Saclay</p>
+                        <p>Modules clés : Machine learning, Vision, Optimisation, ROS, Modélisation et commande des systèmes mobiles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2024</div>
+                        <h3>Diplôme d'ingénieur d'État en Automatique</h3>
+                        <p>École Nationale Polytechnique d'Alger</p>
+                        <p>Principaux cours : Commande avancée, Robotique, Automates, Optimisation, Électronique de puissance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2019</div>
+                        <h3>Classes préparatoires intégrées</h3>
+                        <p>École Nationale Polytechnique d'Alger</p>
+                        <p>Formation scientifique intensive. Classement national : 5ᵉ/1723.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017</div>
+                        <h3>Baccalauréat mathématiques</h3>
+                        <p>Mention Très Bien</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2>Projets Académiques et de Recherche</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Commande d'un robot mobile différentiel</h3>
+                        <p>Conception et simulation de stratégies de commande non linéaire (Lyapunov, backstepping, mode glissant, réseaux de neurones).</p>
+                        <a href="#" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Commande d'un quadrotor par quaternions</h3>
+                        <p>Contrôle d'un drone quadrotor via quaternions pour éviter les singularités des angles d'Euler.</p>
+                        <a href="#" class="btn">Voir plus</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Contrôle adaptatif pour un pancréas artificiel</h3>
+                        <p>Implémentation d'un contrôle adaptatif pour la régulation de la glycémie.</p>
+                        <a href="https://ieeexplore.ieee.org/document/11037053" class="btn">Voir publication</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programmation</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>MATLAB</li>
+                        <li>VHDL</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Robotique & Automatique</h3>
+                    <ul class="skill-list">
+                        <li>ROS 2</li>
+                        <li>KUKA</li>
+                        <li>Automates Siemens</li>
+                        <li>Commande non linéaire</li>
+                        <li>Q-learning</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Outils & Logiciels</h3>
+                    <ul class="skill-list">
+                        <li>Unity Pro XL</li>
+                        <li>EcoStruxure</li>
+                        <li>Vijeo Designer</li>
+                        <li>Multisim</li>
+                        <li>AutoCAD</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Langues</h3>
+                    <ul class="skill-list">
+                        <li>Français (C1)</li>
+                        <li>Anglais (B2)</li>
+                        <li>Arabe (langue maternelle)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour toute opportunité de collaboration ou d'échange !</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>serina.bensalem@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <span>@Serine Bensalem</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github contact-icon"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>Évry (91)</span>
+                </div>
             </div>
         </div>
     </section>
