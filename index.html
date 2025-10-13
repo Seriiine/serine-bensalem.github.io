@@ -13,6 +13,7 @@
             --light: #ecf0f1;
             --dark: #2c3e50;
             --gray: #95a5a6;
+            --sidebar-width: 250px;
         }
 
         * {
@@ -30,6 +31,7 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            margin-left: var(--sidebar-width);
         }
 
         .container {
@@ -85,46 +87,87 @@
             transform: translateY(-3px);
         }
 
-        /* Header */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Sidebar Navigation */
+        .sidebar {
             position: fixed;
-            width: 100%;
+            left: 0;
             top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 40px 0;
             z-index: 1000;
+            overflow-y: auto;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
+        .sidebar-content {
+            padding: 0 30px;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
+        .profile-sidebar {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img-sidebar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-title {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         .nav-links {
-            display: flex;
             list-style: none;
+            margin-top: 30px;
         }
 
         .nav-links li {
-            margin-left: 30px;
+            margin-bottom: 15px;
         }
 
         .nav-links a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: white;
             text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--secondary);
+        .nav-links a:hover, .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .nav-links i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.7;
         }
 
         /* Hero Section */
@@ -148,7 +191,7 @@
             object-fit: cover;
             border: 5px solid white;
             margin-bottom: 30px;
-            background-color: #ddd; /* Couleur de fond temporaire */
+            background-color: #ddd;
         }
 
         .social-links {
@@ -217,9 +260,107 @@
             margin-bottom: 10px;
         }
 
+        /* Logos des écoles */
+        .school-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .school-logo {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+
+        .school-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Stages Section */
+        .stages {
+            background-color: white;
+        }
+
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .stage-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .stage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .stage-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .stage-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stage-company {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .stage-date {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .stage-description {
+            margin-bottom: 15px;
+        }
+
+        .stage-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
         /* Projects Section */
         .projects {
-            background-color: white;
+            background-color: #f5f7fa;
         }
 
         .projects-grid {
@@ -243,7 +384,7 @@
         .project-img {
             width: 100%;
             height: 200px;
-            background-color: #eee; /* Temporaire */
+            background-color: #eee;
         }
 
         .project-content {
@@ -252,7 +393,7 @@
 
         /* Skills Section */
         .skills {
-            background-color: #f5f7fa;
+            background-color: white;
         }
 
         .skills-container {
@@ -326,15 +467,33 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
+            body {
+                margin-left: 0;
             }
-            
-            .nav-links li {
-                margin: 10px 0;
+
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
             }
-            
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1001;
+                background: var(--secondary);
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
@@ -352,31 +511,56 @@
             .timeline-item:nth-child(even) {
                 left: 0;
             }
+
+            .school-logos {
+                gap: 20px;
+            }
+
+            .school-logo {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Serine Bensalem</div>
-                <ul class="nav-links">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Menu toggle pour mobile -->
+    <button class="menu-toggle" style="display: none;">
+        <i class="fas fa-bars"></i>
+    </button>
 
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-sidebar">
+                <div class="profile-img-sidebar"></div>
+                <div class="sidebar-name">Serine Bensalem</div>
+                <div class="sidebar-title">Ingénieure en Automatique</div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#accueil" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="#formation"><i class="fas fa-graduation-cap"></i> Formation</a></li>
+                <li><a href="#stages"><i class="fas fa-briefcase"></i> Stages</a></li>
+                <li><a href="#projets"><i class="fas fa-project-diagram"></i> Projets</a></li>
+                <li><a href="#competences"><i class="fas fa-code"></i> Compétences</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2024 Serine Bensalem</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="container">
             <div class="profile-img"></div>
             <h1>Serine Bensalem</h1>
-            <p>Étudiante en Master 2 Systèmes Automatiques Mobiles à l'Université d'Évry (Paris-Saclay), passionnée par la robotique, la commande et l'intelligence artificielle.</p>
-            <p>Diplômée de l'École Nationale Polytechnique d'Alger et actuellement en double diplôme à l'Université Paris-Saclay, j'ai développé un fort intérêt pour les systèmes autonomes, la vision, le contrôle non linéaire et la robotique collaborative.</p>
+            <p>Diplômée de l'École Nationale Polytechnique d'Alger et actuellement en Master 2 Systèmes Automatiques Mobiles à l'Université Paris-Saclay, je suis passionnée par la robotique et l'intelligence artificielle.</p> 
+            <p>Recherche actuellement un stage de six mois pour mettre en pratique mes compétences en systèmes autonomes, vision et contrôle de robots collaboratifs.</p>
+
             <div class="hero-buttons">
                 <a href="#" class="btn">Télécharger mon CV</a>
                 <a href="#contact" class="btn">Me contacter</a>
@@ -384,7 +568,6 @@
             <div class="social-links">
                 <a href="mailto:serina.bensalem@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-graduation-cap"></i></a>
             </div>
         </div>
@@ -400,7 +583,24 @@
                         <div class="timeline-date">2024 - 2025</div>
                         <h3>Master 2 - Systèmes Automatiques Mobiles</h3>
                         <p>Université Paris-Saclay</p>
-                        <p>Modules clés : Machine learning, Vision, Optimisation, ROS, Modélisation et commande des systèmes mobiles.</p>
+                        <p>Modules clés :</p>
+                            <div style="display: flex; gap: 40px;">
+                                    <ul>
+                                         <li>Machine Learning</li>
+                                        <li>Vision et traitement d'images pour systèmes mobiles</li>
+                                        <li>Optimisation appliquée</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Modélisation et commande de systèmes mobiles</li>
+                                        <li>Localisation et cartographie</li>
+                                        <li>Fusion multi-capteurs</li>
+                                        </ul>
+                                        <ul>
+                                        <li>Véhicules autonomes</li>
+                                        <li>ROS</li>
+                                        <li>Commande référencée capteurs</li>
+                                            </ul>
+                                </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -424,6 +624,93 @@
                         <div class="timeline-date">2017</div>
                         <h3>Baccalauréat mathématiques</h3>
                         <p>Mention Très Bien</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logos des écoles -->
+            <div class="school-logos">
+                <div class="school-logo">
+                    <img src="paris-saclay-logo.png" alt="Université Paris-Saclay">
+                </div>
+                <div class="school-logo">
+                    <img src="Logo-ENP.png" alt="ENP">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouvelle Section Stages -->
+    <section id="stages" class="stages">
+        <div class="container">
+            <h2>Expériences Professionnelles</h2>
+            <div class="stages-grid">
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <div>
+                            <h3 class="stage-title">Robotique Collaborative & Industrie 4.0</h3>
+                            <p class="stage-company">Centre de Recherche des Technologies Avancées (CDTA)</p>
+                        </div>
+                        <div class="stage-date">Sept. - Oct. 2024</div>
+                    </div>
+                    <p class="stage-description">Programmation et contrôle d'un robot collaboratif pour l'industrie 4.0.</p>
+                    <div class="stage-skills">
+                        <span class="skill-tag">ROS</span>
+                        <span class="skill-tag">Q-learning</span>
+                        <span class="skill-tag">Robotique industrielle</span>
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <div>
+                            <h3 class="stage-title">Programmation d'automates et IHM</h3>
+                            <p class="stage-company">Schneider Electric</p>
+                        </div>
+                        <div class="stage-date">Avr. - Mai 2024</div>
+                    </div>
+                    <p class="stage-description">Programmation d'automates et développement d'IHM.</p>
+                    <div class="stage-skills">
+                        <span class="skill-tag">EcoStruxure</span>
+                        <span class="skill-tag">Unity Pro XL</span>
+                        <span class="skill-tag">Vijeo Designer</span>
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <div>
+                            <h3 class="stage-title">Stage de découverte</h3>
+                            <p class="stage-company">Groupe SAIDAL</p>
+                        </div>
+                        <div class="stage-date">Déc. 2023 - Janv. 2024</div>
+                    </div>
+                    <p class="stage-description">Initiation aux procédés pharmaceutiques et systèmes d'automatisation industrielle.</p>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <div>
+                            <h3 class="stage-title">Stage de découverte</h3>
+                            <p class="stage-company">Bomare Company</p>
+                        </div>
+                        <div class="stage-date">Mars - Avr. 2023</div>
+                    </div>
+                    <p class="stage-description">Découverte des processus de fabrication électronique et technologies d'écrans.</p>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <div>
+                            <h3 class="stage-title">Automatisation Industrielle</h3>
+                            <p class="stage-company">Siemens SPA</p>
+                        </div>
+                        <div class="stage-date">Déc. 2022 - Janv. 2023</div>
+                    </div>
+                    <p class="stage-description">Formation SIMATIC S7 Maintenance-Niveau 1 : programmation S7-300 et maintenance industrielle.</p>
+                    <div class="stage-skills">
+                        <span class="skill-tag">Siemens</span>
+                        <span class="skill-tag">Automates</span>
                     </div>
                 </div>
             </div>
@@ -526,10 +813,6 @@
                     <span>@Serine Bensalem</span>
                 </div>
                 <div class="contact-item">
-                    <i class="fab fa-github contact-icon"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="contact-item">
                     <i class="fas fa-map-marker-alt contact-icon"></i>
                     <span>Évry (91)</span>
                 </div>
@@ -538,19 +821,51 @@
     </section>
 
     <script>
-        // Smooth scrolling
+        // Smooth scrolling et navigation active
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 80,
+                        top: target.offsetTop - 20,
                         behavior: 'smooth'
                     });
                 }
             });
         });
+
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+        }
+
+        // Fermer le menu mobile en cliquant sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+
+        // Gestion responsive
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('active');
+                menuToggle.style.display = 'none';
+            } else {
+                menuToggle.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Appel initial
     </script>
 </body>
 </html>
