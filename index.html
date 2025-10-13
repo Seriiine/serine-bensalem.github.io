@@ -210,24 +210,6 @@
             transform: translateY(-5px);
         }
 
-        .orcid-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: white;
-            color: var(--primary);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-top: 15px;
-            text-decoration: none;
-        }
-
-        .orcid-badge:hover {
-            background: var(--light);
-        }
-
         /* Section Formation avec logos */
         .education {
             background-color: #f5f7fa;
@@ -328,12 +310,13 @@
         }
 
         .module-tag {
-            background: linear-gradient(135deg, var(--secondary), #2980b9);
-            color: white;
+            background-color: var(--light);
+            color: var(--primary);
             padding: 4px 12px;
-            border-radius: 15px;
+            border-radius: 12px;
             font-size: 0.8rem;
             font-weight: 500;
+            border: 1px solid #e1e8ed;
         }
 
         .education-link {
@@ -349,112 +332,9 @@
             text-decoration: underline;
         }
 
-        /* Stages Section avec logos */
+        /* Stages Section - Une seule colonne */
         .stages {
             background-color: white;
-        }
-
-        .stages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .stage-card {
-            display: flex;
-            gap: 20px;
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--secondary);
-            transition: all 0.3s ease;
-        }
-
-        .stage-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .stage-logo {
-            flex-shrink: 0;
-            width: 70px;
-            height: 70px;
-            background: white;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            padding: 10px;
-            border: 2px solid var(--light);
-        }
-
-        .stage-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .stage-content {
-            flex: 1;
-        }
-
-        .stage-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .stage-title {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .stage-company {
-            font-weight: 600;
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        .stage-company:hover {
-            text-decoration: underline;
-        }
-
-        .stage-date {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-
-        .stage-description {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .stage-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .skill-tag {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-        }
-
-        /* Projects Section - Une seule colonne */
-        .projects {
-            background-color: #f5f7fa;
         }
 
         .projects-single-column {
@@ -512,11 +392,13 @@
         }
 
         .tech-tag {
-            background: linear-gradient(135deg, var(--secondary), #2980b9);
-            color: white;
+            background-color: var(--light);
+            color: var(--primary);
             padding: 4px 12px;
-            border-radius: 15px;
+            border-radius: 12px;
             font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #e1e8ed;
         }
 
         .video-container {
@@ -594,15 +476,46 @@
             color: var(--secondary);
         }
 
-        .language-link {
-            color: var(--secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-left: 10px;
+        /* Centres d'Intérêt */
+        .interests {
+            background-color: #f5f7fa;
+            padding: 80px 0;
         }
 
-        .language-link:hover {
-            text-decoration: underline;
+        .interests-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .interest-item {
+            text-align: center;
+            padding: 25px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .interest-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .interest-item p {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
         }
 
         /* Contact Section */
@@ -632,6 +545,17 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
         }
 
         .contact-icon {
@@ -688,23 +612,6 @@
                 gap: 10px;
             }
 
-            .stage-card {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-
-            .stage-logo {
-                width: 60px;
-                height: 60px;
-                margin: 0 auto;
-            }
-
-            .stage-header {
-                flex-direction: column;
-                gap: 8px;
-            }
-
             .project-header {
                 flex-direction: column;
                 gap: 10px;
@@ -713,6 +620,15 @@
             .contact-info {
                 flex-direction: column;
                 gap: 20px;
+            }
+
+            .interests-container {
+                gap: 20px;
+            }
+
+            .interest-item {
+                min-width: 130px;
+                padding: 20px 15px;
             }
         }
     </style>
@@ -734,10 +650,11 @@
             
             <ul class="nav-links">
                 <li><a href="#accueil" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="#stages"><i class="fas fa-briefcase"></i> Expériences</a></li>
                 <li><a href="#formation"><i class="fas fa-graduation-cap"></i> Formation</a></li>
-                <li><a href="#stages"><i class="fas fa-briefcase"></i> Stages</a></li>
                 <li><a href="#projets"><i class="fas fa-project-diagram"></i> Projets</a></li>
                 <li><a href="#competences"><i class="fas fa-code"></i> Compétences</a></li>
+                <li><a href="#interests"><i class="fas fa-heart"></i> Centres d'intérêt</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
 
@@ -757,18 +674,106 @@
             <div class="hero-buttons">
                 <a href="#" class="btn">Télécharger mon CV</a>
                 <a href="#contact" class="btn">Me contacter</a>
+                <a href="https://orcid.org/0009-0003-1643-4743" class="btn" style="background: #a6ce39; border: none;" target="_blank">
+                    <i class="fab fa-orcid"></i> ORCID
+                </a>
             </div>
             <div class="social-links">
                 <a href="mailto:serina.bensalem@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/serine-bensalem-7136b1191/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://orcid.org/0009-0003-1643-4743" class="orcid-badge" target="_blank">
-                    <i class="fab fa-orcid"></i>ORCID: 0009-0003-1643-4743
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Section Formation avec logos CORRIGÉE -->
+    <!-- Section Stages - Une seule colonne -->
+    <section id="stages" class="stages">
+        <div class="container">
+            <h2>Expériences Professionnelles</h2>
+            <div class="projects-single-column">
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3 class="project-title">Robotique Collaborative & Industrie 4.0</h3>
+                        <div class="project-date">Sept. - Oct. 2024</div>
+                    </div>
+                    <p class="project-description">
+                        <strong>Centre de Développement des Technologies Avancées (CDTA)</strong><br>
+                        Initiation à l'industrie 4.0, programmation de robots collaboratifs, apprentissage par renforcement avec Q-learning, compréhension des applications en robotique industrielle.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Q-learning</span>
+                        <span class="tech-tag">Robotique industrielle</span>
+                        <span class="tech-tag">ROS</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3 class="project-title">Programmation d'automates et IHM</h3>
+                        <div class="project-date">Avr. - Mai 2024</div>
+                    </div>
+                    <p class="project-description">
+                        <strong>Schneider Electric</strong><br>
+                        Formation sur les logiciels EcoStruxure Machine Expert, Vijeo Designer et Unity Pro XL pour la programmation d'automates industriels et la conception d'IHM.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">EcoStruxure</span>
+                        <span class="tech-tag">Unity Pro XL</span>
+                        <span class="tech-tag">Vijeo Designer</span>
+                        <span class="tech-tag">Automates</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3 class="project-title">Stage de découverte en production pharmaceutique</h3>
+                        <div class="project-date">Déc. 2023 - Janv. 2024</div>
+                    </div>
+                    <p class="project-description">
+                        <strong>Groupe SAIDAL</strong><br>
+                        Visite de l'unité de production pharmaceutique avec exploration des étapes de fabrication des médicaments et présentation des systèmes d'automatisation.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Procédés pharmaceutiques</span>
+                        <span class="tech-tag">Automatisation industrielle</span>
+                        <span class="tech-tag">Contrôle qualité</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3 class="project-title">Stage de découverte en fabrication électronique</h3>
+                        <div class="project-date">Mars - Avr. 2023</div>
+                    </div>
+                    <p class="project-description">
+                        <strong>Bomare Company</strong><br>
+                        Initiation aux processus industriels de fabrication de téléviseurs et de cartes mères.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Fabrication électronique</span>
+                        <span class="tech-tag">Technologies d'écrans</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3 class="project-title">Automatisation Industrielle</h3>
+                        <div class="project-date">Déc. 2022 - Janv. 2023</div>
+                    </div>
+                    <p class="project-description">
+                        <strong>Siemens SPA</strong><br>
+                        Formation SIMATIC S7 Maintenance-Niveau 1 : programmation S7-300 et maintenance industrielle.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Siemens</span>
+                        <span class="tech-tag">Automates</span>
+                        <span class="tech-tag">Maintenance industrielle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formation avec logos -->
     <section id="formation" class="education">
         <div class="container">
             <h2>Formation et Parcours Académique</h2>
@@ -777,7 +782,7 @@
                 <div class="education-item">
                     <div class="education-logo">
                         <img src="paris-saclay-logo.png" alt="paris-saclay-logo">
-                        </div>
+                    </div>
                     <div class="education-content">
                         <div class="education-header">
                             <div>
@@ -861,9 +866,7 @@
                 <!-- Baccalauréat - SANS LOGO NI LIEN -->
                 <div class="education-item">
                     <div class="education-logo" style="background: #f8f9fa; border: 2px dashed #dee2e6;">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                        
-                        </div>
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.7rem; text-align: center;"></div>
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -886,120 +889,7 @@
         </div>
     </section>
 
-    <!-- Section Stages avec logos ET LIENS -->
-    <section id="stages" class="stages">
-        <div class="container">
-            <h2>Expériences Professionnelles</h2>
-            <div class="stages-grid">
-                <div class="stage-card">
-                    <div class="stage-logo">
-                        <img src="LOGO-CDTA.png" alt="CDTA">
-                    </div>
-                    <div class="stage-content">
-                        <div class="stage-header">
-                            <div>
-                                <h3 class="stage-title">Robotique Collaborative & Industrie 4.0</h3>
-                                <a href="https://www.cdta.dz/fr/" class="stage-company">Centre de Développement des Technologies Avancées (CDTA)</a>
-                            </div>
-                            <div class="stage-date">Sept. - Oct. 2024</div>
-                        </div>
-                        <p class="stage-description">Initiation à l'industrie 4.0, programmation de robots collaboratifs, apprentissage par renforcement avec Q-learning, compréhension des applications en robotique industrielle.</p>
-                        <div class="stage-skills">
-                            <span class="skill-tag">Q-learning</span>
-                            <span class="skill-tag">Robotique industrielle</span>
-                            <span class="skill-tag">ROS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stage-card">
-                    <div class="stage-logo">
-                        <img src="schneider-logo.png" alt=schneider">
-                    </div>
-                    <div class="stage-content">
-                        <div class="stage-header">
-                            <div>
-                                <h3 class="stage-title">Programmation d'automates et IHM</h3>
-                                <a href="https://www.se.com/dz/fr/" class="stage-company">Schneider Electric</a>
-                            </div>
-                            <div class="stage-date">Avr. - Mai 2024</div>
-                        </div>
-                        <p class="stage-description">Formation sur les logiciels EcoStruxure Machine Expert, Vijeo Designer et Unity Pro XL pour la programmation d'automates industriels et la conception d'IHM.</p>
-                        <div class="stage-skills">
-                            <span class="skill-tag">EcoStruxure</span>
-                            <span class="skill-tag">Unity Pro XL</span>
-                            <span class="skill-tag">Vijeo Designer</span>
-                            <span class="skill-tag">Automates</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stage-card">
-                    <div class="stage-logo">
-                        <img src="SAIDAL-logo.png" alt="SAIDAL">
-                    </div>
-                    <div class="stage-content">
-                        <div class="stage-header">
-                            <div>
-                                <h3 class="stage-title">Stage de découverte en production pharmaceutique</h3>
-                                <a href="https://saidalgroup.dz/public/page/GROUPE-SAIDAL" class="stage-company">Groupe SAIDAL</a>
-                            </div>
-                            <div class="stage-date">Déc. 2023 - Janv. 2024</div>
-                        </div>
-                        <p class="stage-description">Visite de l'unité de production pharmaceutique avec exploration des étapes de fabrication des médicaments et présentation des systèmes d'automatisation.</p>
-                        <div class="stage-skills">
-                            <span class="skill-tag">Procédés pharmaceutiques</span>
-                            <span class="skill-tag">Automatisation industrielle</span>
-                            <span class="skill-tag">Contrôle qualité</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stage-card">
-                    <div class="stage-logo">
-                        <img src="Bomare-logo.png" alt="Bomare">
-                    </div>
-                    <div class="stage-content">
-                        <div class="stage-header">
-                            <div>
-                                <h3 class="stage-title">Stage de découverte en fabrication électronique</h3>
-                                <a href="https://bomarecompany.com/" class="stage-company">Bomare Company</a>
-                            </div>
-                            <div class="stage-date">Mars - Avr. 2023</div>
-                        </div>
-                        <p class="stage-description">Initiation aux processus industriels de fabrication de téléviseurs et de cartes mères.</p>
-                        <div class="stage-skills">
-                            <span class="skill-tag">Fabrication électronique</span>
-                            <span class="skill-tag">Technologies d'écrans</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stage-card">
-                    <div class="stage-logo">
-                        <img src="siemens-logo.png" alt="Siemens-logo">
-                    </div>
-                    <div class="stage-content">
-                        <div class="stage-header">
-                            <div>
-                                <h3 class="stage-title">Automatisation Industrielle</h3>
-                                <a href="https://sitrain.siemens.dz/" class="stage-company">Siemens SPA</a>
-                            </div>
-                            <div class="stage-date">Déc. 2022 - Janv. 2023</div>
-                        </div>
-                        <p class="stage-description">Formation SIMATIC S7 Maintenance-Niveau 1 : programmation S7-300 et maintenance industrielle.</p>
-                        <div class="stage-skills">
-                            <span class="skill-tag">Siemens</span>
-                            <span class="skill-tag">Automates</span>
-                            <span class="skill-tag">Maintenance industrielle</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Projets - Une seule colonne -->
+    <!-- Section Projets -->
     <section id="projets" class="projects">
         <div class="container">
             <h2>Projets Académiques et de Recherche</h2>
@@ -1086,7 +976,7 @@
                     </div>
                 </div>
 
-                <!-- Projet FPGA avec placeholder vidéo -->
+                <!-- Projet FPGA avec vidéo -->
                 <div class="project-item">
                     <div class="project-header">
                         <h3 class="project-title">Conception d'un Compteur-Décompteur BCD 8421 sur Carte FPGA</h3>
@@ -1169,14 +1059,35 @@
                 <div class="skill-category">
                     <h3>Langues</h3>
                     <ul class="skill-list">
-                        <li>
-                            Français (C1)
-                        </li>
-                        <li>
-                            Anglais (B2)
-                        </li>
+                        <li>Français (C1)</li>
+                        <li>Anglais (B2)</li>
                         <li>Arabe (langue maternelle)</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Centres d'Intérêt -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <h2>Centres d'Intérêt</h2>
+            <div class="interests-container">
+                <div class="interest-item">
+                    <div class="interest-icon">🎬</div>
+                    <p>Cinéma</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">📸</div>
+                    <p>Photographie</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">✈️</div>
+                    <p>Voyages</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">🍽️</div>
+                    <p>Gastronomie</p>
                 </div>
             </div>
         </div>
@@ -1188,26 +1099,26 @@
             <h2>Contact</h2>
             <p>N'hésitez pas à me contacter pour toute opportunité de collaboration ou d'échange !</p>
             <div class="contact-info">
-                <div class="contact-item">
+                <a href="mailto:serina.bensalem@gmail.com" class="contact-item">
                     <i class="fas fa-envelope contact-icon"></i>
                     <span>serina.bensalem@gmail.com</span>
-                </div>
-                <div class="contact-item">
+                </a>
+                <a href="tel:+33743537632" class="contact-item">
                     <i class="fas fa-phone contact-icon"></i>
                     <span>+33 7 43 53 76 32</span>
-                </div>
-                <div class="contact-item">
+                </a>
+                <a href="https://www.linkedin.com/in/serine-bensalem-7136b1191/" class="contact-item" target="_blank">
                     <i class="fab fa-linkedin contact-icon"></i>
                     <span>@Serine Bensalem</span>
-                </div>
+                </a>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt contact-icon"></i>
                     <span>Ile-de-France</span>
                 </div>
-                <div class="contact-item">
+                <a href="https://orcid.org/0009-0003-1643-4743" class="contact-item" target="_blank">
                     <i class="fab fa-orcid contact-icon"></i>
                     <span>ORCID: 0009-0003-1643-4743</span>
-                </div>
+                </a>
             </div>
         </div>
     </section>
