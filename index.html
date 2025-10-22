@@ -108,7 +108,113 @@
             font-weight: bold;
             font-size: 1.1em;
         }
+        .project-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
+}
 
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-header h3 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.project-year {
+    background: #3498db;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+    .project-description {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+
+    .project-technologies {
+        margin-bottom: 1.2rem;
+    }
+
+    .tech-tag {
+        display: inline-block;
+        background: #ecf0f1;
+        color: #34495e;
+        padding: 0.3rem 0.8rem;
+        margin: 0.2rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        border: 1px solid #bdc3c7;
+    }
+
+    .project-features h4,
+    .project-results h4,
+    .project-publication h4 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .project-features ul {
+        padding-left: 1.2rem;
+        color: #555;
+    }
+
+    .project-features li {
+        margin-bottom: 0.3rem;
+        line-height: 1.5;
+    }
+
+    .project-publication {
+        margin-bottom: 1.2rem;
+    }
+
+    .publication-item {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 5px;
+        border-left: 3px solid #e74c3c;
+        line-height: 1.6;
+        color: #555;
+        }
+
+        .conference-badge {
+        background: #27ae60;
+        color: white;
+        padding: 0.2rem 0.6rem;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+        }
+    
+        .conference-location {
+        color: #7f8c8d;
+        font-style: italic;
+        font-size: 0.9rem;
+        }
+
+        .project-results p {
+            color: #555;
+            line-height: 1.6;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 3px solid #27ae60;
+        }
         /* Sidebar Navigation */
         .sidebar {
             position: fixed;
@@ -1096,23 +1202,56 @@
             <div class="projects-single-column">
                 <!-- Projet Pancréas Artificiel - PFE -->
                 <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Techniques de Contrôle Adaptatif d'Ordre Fractionnaire pour un Pancréas Artificiel</h3>
-                        <div class="project-date">Projet de Fin d'Étude - 2025</div>
-                    </div>
-                    <p class="project-description">
-                        Développement de techniques avancées de modélisation et de contrôle d'ordre fractionnaire pour un pancréas artificiel destiné aux patients diabétiques de type 1. Ce projet approfondit les travaux initiés lors du séminaire de 4ème année avec l'implémentation de contrôleurs adaptatifs indirects de référence modèle, de contrôleurs par mode glissant d'ordre fractionnaire, et de contrôleurs neuro-flous optimisés par algorithme génétique.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Calcul fractionnaire</span>
-                        <span class="tech-tag">Contrôle adaptatif</span>
-                        <span class="tech-tag">Mode glissant</span>
-                        <span class="tech-tag">Neuro-flou</span>
-                        <span class="tech-tag">Algorithmes génétiques</span>
-                        <span class="tech-tag">MATLAB/Simulink</span>
-                    </div>
-                </div>
-
+    <div class="project-header">
+        <h3>Contrôle Adaptatif d'Ordre Fractionnaire pour Pancréas Artificiel</h3>
+        <span class="project-year">2025</span>
+    </div>
+    
+    <div class="project-content">
+        <p class="project-description">
+            Développement d'un système de régulation glycémique autonome pour patients diabétiques de type 1 
+            utilisant des techniques avancées de contrôle et modélisation fractionnaire.
+        </p>
+        
+        <div class="project-technologies">
+            <span class="tech-tag">MATLAB/Simulink</span>
+            <span class="tech-tag">Calcul fractionnaire</span>
+            <span class="tech-tag">Contrôle adaptatif</span>
+            <span class="tech-tag">Mode glissant</span>
+            <span class="tech-tag">Neuro-flou</span>
+            <span class="tech-tag">Algorithmes génétiques</span>
+        </div>
+        
+        <div class="project-features">
+            <h4>Principales réalisations :</h4>
+            <ul>
+                <li>Modélisation du système glucose-insuline avec calcul fractionnaire</li>
+                <li>Conception de 3 contrôleurs avancés (MRAC, FOSMC, ANFIS)</li>
+                <li>Implémentation d'observateur robuste pour l'estimation glycémique</li>
+                <li>Optimisation des paramètres par algorithme génétique</li>
+                <li>Validation via tests de robustesse (repas, bruit, variabilité)</li>
+            </ul>
+        </div>
+        
+        <div class="project-publication">
+            <h4>Publication scientifique :</h4>
+            <div class="publication-item">
+                <strong>Fractional-Order Indirect Model Reference Adaptive Control Design for Type 1 Diabetes Glucose Regulation</strong>
+                <br>
+                <em>S. Bensalem, A. Boukaba, S. Ladaci</em>
+                <br>
+                <span class="conference-badge">Accepté</span> IFAC International Conference on Fractional Differentiation and its Applications (ICFDA 2025)
+                <br>
+                <span class="conference-location">Alger, Algérie - Décembre 2025</span>
+            </div>
+        </div>
+        
+        <div class="project-results">
+            <h4>Résultats :</h4>
+            <p>Système de contrôle capable de maintenir la glycémie dans des plages physiologiques sûres avec injection d'insuline optimisée.</p>
+        </div>
+    </div>
+</div>
                 <!-- Projet Pancréas Artificiel - Séminaire -->
                 <div class="project-item">
                     <div class="project-header">
@@ -1372,3 +1511,4 @@
     </script>
 </body>
 </html>
+
