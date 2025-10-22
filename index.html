@@ -87,6 +87,28 @@
             transform: translateY(-3px);
         }
 
+        /* Style pour les listes avec flèches */
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .bullet-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
         /* Sidebar Navigation */
         .sidebar {
             position: fixed;
@@ -823,7 +845,11 @@
                             </div>
                             <div class="stage-date">Sept. - Oct. 2024</div>
                         </div>
-                        <p class="stage-description">- Implémentation d'un algorithme d'apprentissage par renforcement pour optimiser les trajectoires du robot. <br>- Développement d'une interface Java et intégration avec KUKA Sunrise.Workbench<br>- Réduction des temps de cycle grâce à l'optimisation des séquences de tâches</p>
+                        <ul class="bullet-list">
+                            <li>Implémentation d'un algorithme d'apprentissage par renforcement pour optimiser les trajectoires du robot</li>
+                            <li>Développement d'une interface Java et intégration avec KUKA Sunrise.Workbench</li>
+                            <li>Réduction des temps de cycle grâce à l'optimisation des séquences de tâches</li>
+                        </ul>
                         <div class="stage-skills">
                             <span class="skill-tag">Q-Learning</span>
                             <span class="skill-tag">Java/NetBeans</span>
@@ -845,11 +871,12 @@
                             </div>
                             <div class="stage-date">Avr. - Mai 2024</div>
                         </div>
-                        <p class="stage-description">- Programmation d'automates Modicon M221/M340 avec EcoStruxure Machine Expert. 
-                            <br> - Développement d'IHM avec Vijeo Designer pour la supervision de processus industriels. 
-                            <br> - Conception de systèmes automatisés en FBD/Ladder sous Unity Pro XL.
-                            <br> - Gestion de projets complets : de la configuration matérielle à la mise en service.
-                        </p>
+                        <ul class="bullet-list">
+                            <li>Programmation d'automates Modicon M221/M340 avec EcoStruxure Machine Expert</li>
+                            <li>Développement d'IHM avec Vijeo Designer pour la supervision de processus industriels</li>
+                            <li>Conception de systèmes automatisés en FBD/Ladder sous Unity Pro XL</li>
+                            <li>Gestion de projets complets : de la configuration matérielle à la mise en service</li>
+                        </ul>
                         <div class="stage-skills">
                             <span class="skill-tag">EcoStruxure</span>
                             <span class="skill-tag">Unity Pro XL</span>
@@ -872,11 +899,11 @@
                             </div>
                             <div class="stage-date">Déc. 2023 - Janv. 2024</div>
                         </div>
-                        <p class="stage-description">
-                            <br> - Analyse des processus automatisés de production et conditionnement de médicaments. 
-                            <br> - Observation des systèmes robotisés (Pick & Place) pour le conditionnement primaire/secondaire.
-                            <br> - Découverte des chaines de production de formes sèches (comprimés, gélules).
-                        </p>
+                        <ul class="bullet-list">
+                            <li>Analyse des processus automatisés de production et conditionnement de médicaments</li>
+                            <li>Observation des systèmes robotisés (Pick & Place) pour le conditionnement primaire/secondaire</li>
+                            <li>Découverte des chaines de production de formes sèches (comprimés, gélules)</li>
+                        </ul>
                         <div class="stage-skills">
                             <span class="skill-tag">Procédés pharmaceutiques</span>
                             <span class="skill-tag">Automatisation industrielle</span>
@@ -898,14 +925,12 @@
                             </div>
                             <div class="stage-date">Mars - Avr. 2023</div>
                         </div>
-                        <p class="stage-description">
-                            <br> - Observation des chaines de production SMT (Surface Mount Technology) et DIP pour cartes mères.
-                            <br> - Découverte des processus de contrôle qualité (SPI, AOI, tests fonctionnels). 
-                            <br> - Initiation aux systèmes automatisés : machines Pick & Place, fours de refusion. 
-                            <br> - Familiarisation avec les normes ISO 9001 en environnement industriel. 
-
-                            
-                        </p>
+                        <ul class="bullet-list">
+                            <li>Observation des chaines de production SMT (Surface Mount Technology) et DIP pour cartes mères</li>
+                            <li>Découverte des processus de contrôle qualité (SPI, AOI, tests fonctionnels)</li>
+                            <li>Initiation aux systèmes automatisés : machines Pick & Place, fours de refusion</li>
+                            <li>Familiarisation avec les normes ISO 9001 en environnement industriel</li>
+                        </ul>
                         <div class="stage-skills">
                             <span class="skill-tag">Électronique Industrielle</span>
                             <span class="skill-tag">Contrôle Qualité</span>
@@ -926,13 +951,12 @@
                             </div>
                             <div class="stage-date">Déc. 2022 - Janv. 2023</div>
                         </div>
-                        <p class="stage-description">Formation SIMATIC S7 Maintenance-Niveau 1 
-                        <br> - Programmation d'automates SIMATIC S7-300 avec le logiciel STEP 7. 
-                        <br> - Développement de fonctions de commande (FC15, FC16) pour bandes transporteuses.
-                        <br> - Configuration matérielle et mise en service de systèmes automatisés.
-                        <br> - Maîtrise des langages de programmation LAD, FBD et STL. 
-                        
-                        </p>
+                        <ul class="bullet-list">
+                            <li>Programmation d'automates SIMATIC S7-300 avec le logiciel STEP 7</li>
+                            <li>Développement de fonctions de commande (FC15, FC16) pour bandes transporteuses</li>
+                            <li>Configuration matérielle et mise en service de systèmes automatisés</li>
+                            <li>Maîtrise des langages de programmation LAD, FBD et STL</li>
+                        </ul>
                         <div class="stage-skills">
                             <span class="skill-tag">SIMATIC S7-300</span>
                             <span class="skill-tag">STEP 7</span>
@@ -1035,312 +1059,4 @@
                 </div>
 
                 <!-- Baccalauréat - SANS LOGO NI LIEN -->
-                <div class="education-item">
-                    <div class="education-logo" style="background: #f8f9fa; border: 2px dashed #dee2e6;">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.7rem; text-align: center;"></div>
-                    </div>
-                    <div class="education-content">
-                        <div class="education-header">
-                            <div>
-                                <h3 class="education-title">Baccalauréat Série Mathématiques</h3>
-                                <p class="education-school" style="color: var(--secondary);">Lycée Ali BOUMENDJEL - Alger</p>
-                            </div>
-                            <div class="education-date">2020</div>
-                        </div>
-                        <p class="education-description">Diplôme obtenu avec les félicitations du jury.</p>
-                        <div class="education-modules">
-                            <span class="module-tag">Mathématiques</span>
-                            <span class="module-tag">Physique-Chimie</span>
-                            <span class="module-tag">Sciences</span>
-                        </div>
-                        <p style="margin-top: 10px; font-weight: 600; color: var(--secondary);">Mention Très Bien - Moyenne : 17,40/20</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projets" class="projects">
-        <div class="container">
-            <h2>Projets Académiques et de Recherche</h2>
-            <div class="projects-single-column">
-                <!-- Projet Pancréas Artificiel - PFE -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Techniques de Contrôle Adaptatif d'Ordre Fractionnaire pour un Pancréas Artificiel</h3>
-                        <div class="project-date">Projet de Fin d'Étude - 2025</div>
-                    </div>
-                    <p class="project-description">
-                        Développement de techniques avancées de modélisation et de contrôle d'ordre fractionnaire pour un pancréas artificiel destiné aux patients diabétiques de type 1. Ce projet approfondit les travaux initiés lors du séminaire de 4ème année avec l'implémentation de contrôleurs adaptatifs indirects de référence modèle, de contrôleurs par mode glissant d'ordre fractionnaire, et de contrôleurs neuro-flous optimisés par algorithme génétique.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Calcul fractionnaire</span>
-                        <span class="tech-tag">Contrôle adaptatif</span>
-                        <span class="tech-tag">Mode glissant</span>
-                        <span class="tech-tag">Neuro-flou</span>
-                        <span class="tech-tag">Algorithmes génétiques</span>
-                        <span class="tech-tag">MATLAB/Simulink</span>
-                    </div>
-                </div>
-
-                <!-- Projet Pancréas Artificiel - Séminaire -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Contrôle Adaptatif Optimisé de Référence Modèle pour la Glycémie dans le Diabète de Type 1</h3>
-                        <div class="project-date">Séminaire de Recherche - Mai-Juin 2024</div>
-                    </div>
-                    <p class="project-description">
-                        Conception et implémentation d'un contrôleur adaptatif optimisé pour un pancréas artificiel, visant à gérer le système glycémique humain. Utilisation d'un modèle identifié du système métabolique du glucose humain avec une stratégie de contrôle adaptatif développée pour s'ajuster dynamiquement aux variations individuelles des processus métaboliques.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Contrôle adaptatif MRAC</span>
-                        <span class="tech-tag">Optimisation</span>
-                        <span class="tech-tag">PID</span>
-                        <span class="tech-tag">Algorithmes d'optimisation</span>
-                        <span class="tech-tag">MATLAB/Simulink</span>
-                    </div>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/document/11037053" class="pub-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>Publication IEEE Xplore
-                        </a>
-                        <a href="https://afros2024.com/" class="pub-link" target="_blank">
-                            <i class="fas fa-globe"></i>Conférence AFROS 2024
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Projet Robot Mobile -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Conception et Commande d'un Robot Mobile Différentiel</h3>
-                        <div class="project-date">Janvier 2025</div>
-                    </div>
-                    <p class="project-description">
-                        Modélisation et contrôle d'un robot mobile suiveur de ligne. Exploration de différentes stratégies de commande incluant les méthodes de Lyapunov, la commande par mode glissant et le contrôle par réseau de neurones artificiels. Simulation complète du robot sous ROS 2 et Gazebo.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">ROS 2</span>
-                        <span class="tech-tag">Gazebo</span>
-                        <span class="tech-tag">Lyapunov</span>
-                        <span class="tech-tag">Mode glissant</span>
-                        <span class="tech-tag">Réseaux de neurones</span>
-                        <span class="tech-tag">Commande non linéaire</span>
-                    </div>
-                </div>
-
-                <!-- Projet Quadrotor -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Modélisation et Commande d'un Quadrotor UAV par Quaternions</h3>
-                        <div class="project-date">Décembre 2024</div>
-                    </div>
-                    <p class="project-description">
-                        Modélisation et contrôle d'un drone quadrotor en utilisant les quaternions pour éviter les singularités des angles d'Euler. Mise en œuvre de différentes techniques de commande (backstepping, PID, mode glissant) pour assurer la stabilité et le suivi de trajectoire.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Quaternions</span>
-                        <span class="tech-tag">Backstepping</span>
-                        <span class="tech-tag">PID</span>
-                        <span class="tech-tag">Mode glissant</span>
-                        <span class="tech-tag">MATLAB/Simulink</span>
-                    </div>
-                </div>
-
-                <!-- Projet FPGA avec vidéo -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Conception d'un Compteur-Décompteur BCD 8421 sur Carte FPGA</h3>
-                        <div class="project-date">Mai 2023</div>
-                    </div>
-                    <p class="project-description">
-                        Réalisation d'un compteur-décompteur BCD 8 bits en VHDL sur une carte de développement FPGA Elbert V2 - Spartan 3A. Ce projet inclut l'adaptation de l'horloge, l'affichage sur LEDs et afficheurs 7 segments, et l'implémentation de multiplexeurs pour la gestion de l'affichage, permettant le comptage de 0 à 99 avec réinitialisation automatique.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">VHDL</span>
-                        <span class="tech-tag">FPGA</span>
-                        <span class="tech-tag">Spartan 3A</span>
-                        <span class="tech-tag">Logique numérique</span>
-                    </div>
-                    
-                    <div class="video-container">
-                        <video controls style="width: 100%; border-radius: 10px;">
-                         <source src="projet-fpga-compteur.mp4" type="video/mp4">
-                         Votre navigateur ne supporte pas la lecture de vidéos.
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Compétition -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-title">Algeria Data Cup 2023</h3>
-                        <div class="project-date">Juin 2023 - 2ème Place</div>
-                    </div>
-                    <p class="project-description">
-                        Classée 2ème dans un datathon de data science, avec application de techniques avancées de machine learning (forêts aléatoires) pour résoudre des problématiques réelles de data science.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Data Science</span>
-                        <span class="tech-tag">Forêts Aléatoires</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Compétences -->
-    <section id="competences" class="skills">
-        <div class="container">
-            <h2>Compétences Techniques</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programmation</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>Java</li>
-                        <li>MATLAB</li>
-                        <li>VHDL</li>
-                        <li>HTML/CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Robotique & Automatique</h3>
-                    <ul class="skill-list">
-                        <li>ROS 2</li>
-                        <li>KUKA</li>
-                        <li>Automates Siemens</li>
-                        <li>Commande non linéaire</li>
-                        <li>Q-learning</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Outils & Logiciels</h3>
-                    <ul class="skill-list">
-                        <li>Unity Pro XL</li>
-                        <li>EcoStruxure</li>
-                        <li>Vijeo Designer</li>
-                        <li>Multisim</li>
-                        <li>AutoCAD</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Langues</h3>
-                    <ul class="skill-list">
-                        <li>Français (C1)</li>
-                        <li>Anglais (B2)</li>
-                        <li>Arabe (langue maternelle)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Centres d'Intérêt -->
-    <section id="interests" class="interests">
-        <div class="container">
-            <h2>Centres d'Intérêt</h2>
-            <div class="interests-container">
-                <div class="interest-item">
-                    <div class="interest-icon">🎬</div>
-                    <p>Cinéma</p>
-                </div>
-                <div class="interest-item">
-                    <div class="interest-icon">📸</div>
-                    <p>Photographie</p>
-                </div>
-                <div class="interest-item">
-                    <div class="interest-icon">✈️</div>
-                    <p>Voyages</p>
-                </div>
-                <div class="interest-item">
-                    <div class="interest-icon">🍽️</div>
-                    <p>Gastronomie</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>N'hésitez pas à me contacter pour toute opportunité de collaboration ou d'échange !</p>
-            <div class="contact-info">
-                <a href="mailto:serina.bensalem@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <span>serina.bensalem@gmail.com</span>
-                </a>
-                <a href="tel:+33743537632" class="contact-item">
-                    <i class="fas fa-phone contact-icon"></i>
-                    <span>+33 7 43 53 76 32</span>
-                </a>
-                <a href="https://www.linkedin.com/in/serine-bensalem-7136b1191/" class="contact-item" target="_blank">
-                    <i class="fab fa-linkedin contact-icon"></i>
-                    <span>@Serine Bensalem</span>
-                </a>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <span>Ile-de-France</span>
-                </div>
-                <a href="https://orcid.org/0009-0003-1643-4743" class="contact-item" target="_blank">
-                    <i class="fab fa-orcid contact-icon"></i>
-                    <span>ORCID: 0009-0003-1643-4743</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Smooth scrolling et navigation active
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Menu mobile toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-        }
-
-        // Fermer le menu mobile en cliquant sur un lien
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    sidebar.classList.remove('active');
-                }
-            });
-        });
-
-        // Gestion responsive
-        function handleResize() {
-            if (window.innerWidth > 768) {
-                sidebar.classList.remove('active');
-                menuToggle.style.display = 'none';
-            } else {
-                menuToggle.style.display = 'block';
-            }
-        }
-
-        window.addEventListener('resize', handleResize);
-        handleResize(); // Appel initial
-    </script>
-</body>
-</html>
-
+                <div class="education-item
