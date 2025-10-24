@@ -108,103 +108,7 @@
             font-weight: bold;
             font-size: 1.1em;
         }
-       .project-item {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid #3498db;
-}
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.project-header h3 {
-    color: #2c3e50;
-    margin: 0;
-    font-size: 1.3rem;
-}
-
-.project-year {
-    background: #3498db;
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-.project-description {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-}
-
-.project-technologies {
-    margin-bottom: 1.2rem;
-}
-
-.tech-tag {
-    display: inline-block;
-    background: #ecf0f1;
-    color: #34495e;
-    padding: 0.3rem 0.8rem;
-    margin: 0.2rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    border: 1px solid #bdc3c7;
-}
-
-.project-features h4,
-.project-publication h4 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.project-features ul {
-    padding-left: 1.2rem;
-    color: #555;
-}
-
-.project-features li {
-    margin-bottom: 0.3rem;
-    line-height: 1.5;
-}
-
-.project-publication {
-    margin-bottom: 0;
-}
-
-.publication-item {
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 5px;
-    border-left: 3px solid #e74c3c;
-    line-height: 1.6;
-    color: #555;
-}
-
-.conference-badge {
-    background: #27ae60;
-    color: white;
-    padding: 0.2rem 0.6rem;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-right: 0.5rem;
-}
-
-.conference-location {
-    color: #7f8c8d;
-    font-style: italic;
-    font-size: 0.9rem;
-}
         /* Sidebar Navigation */
         .sidebar {
             position: fixed;
@@ -235,6 +139,7 @@
             object-fit: cover;
             border: 3px solid white;
             margin-bottom: 15px;
+            background-color: #ddd;
         }
 
         .sidebar-name {
@@ -564,62 +469,101 @@
         }
 
         .project-item {
-            background-color: white;
+            background: #fff;
             border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--secondary);
-            transition: all 0.3s ease;
-        }
-
-        .project-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
         }
 
         .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
+            align-items: center;
+            margin-bottom: 1rem;
         }
 
-        .project-title {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 5px;
+        .project-header h3 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 1.3rem;
         }
 
-        .project-date {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 5px 10px;
+        .project-year {
+            background: #3498db;
+            color: white;
+            padding: 0.3rem 0.8rem;
             border-radius: 15px;
             font-size: 0.9rem;
-            white-space: nowrap;
+            font-weight: bold;
         }
 
         .project-description {
-            margin-bottom: 15px;
-            line-height: 1.7;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
         }
 
         .project-technologies {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 15px 0;
+            margin-bottom: 1.2rem;
         }
 
         .tech-tag {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 4px 12px;
+            display: inline-block;
+            background: #ecf0f1;
+            color: #34495e;
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem;
             border-radius: 12px;
+            font-size: 0.85rem;
+            border: 1px solid #bdc3c7;
+        }
+
+        .project-features h4,
+        .project-publication h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .project-features ul {
+            padding-left: 1.2rem;
+            color: #555;
+        }
+
+        .project-features li {
+            margin-bottom: 0.3rem;
+            line-height: 1.5;
+        }
+
+        .project-publication {
+            margin-bottom: 0;
+        }
+
+        .publication-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 3px solid #e74c3c;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .conference-badge {
+            background: #27ae60;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
             font-size: 0.8rem;
-            font-weight: 500;
-            border: 1px solid #e1e8ed;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .conference-location {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.9rem;
         }
 
         .video-container {
@@ -931,7 +875,9 @@
                 <!-- Stage CDTA -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <img src="LOGO-CDTA.png" alt="CDTA">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            CDTA
+                        </div>
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -957,7 +903,9 @@
                 <!-- Stage Schneider Electric -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <img src="schneider-logo.png" alt="Schneider Electric">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            Schneider
+                        </div>
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -985,7 +933,9 @@
                 <!-- Stage SAIDAL -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <img src="SAIDAL-logo.png" alt="SAIDAL">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            SAIDAL
+                        </div>
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -1011,7 +961,9 @@
                 <!-- Stage Bomare -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <img src="Bomare-logo.png" alt="Bomare Company">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            Bomare
+                        </div>
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -1037,7 +989,9 @@
                 <!-- Stage Siemens -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <img src="siemens-logo.png" alt="Siemens">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            Siemens
+                        </div>
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -1072,7 +1026,9 @@
                 <!-- Master 2 - AVEC LOGO -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <img src="paris-saclay-logo.png" alt="paris-saclay-logo">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            Paris-Saclay
+                        </div>
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1101,7 +1057,9 @@
                 <!-- Diplôme d'ingénieur - AVEC LOGO -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <img src="Logo-ENP.png" alt="ENP-logo">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            ENP
+                        </div>
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1129,7 +1087,9 @@
                 <!-- Classes préparatoires - AVEC LOGO -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <img src="Logo-ENP.png" alt="ENP-logo">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
+                            ENP
+                        </div>
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1191,83 +1151,114 @@
             <h2>Projets Académiques et de Recherche</h2>
             <div class="projects-single-column">
                 <!-- Projet Pancréas Artificiel - PFE -->
-  <div class="project-item">
-    <div class="project-header">
-        <h3>Contrôle Adaptatif d'Ordre Fractionnaire pour Pancréas Artificiel</h3>
-        <span class="project-year">2025</span>
-    </div>
-    
-    <div class="project-content">
-        <p class="project-description">
-            Développement d'un système de régulation glycémique autonome pour patients diabétiques de type 1 
-            utilisant des techniques avancées de contrôle et modélisation fractionnaire.
-        </p>
-        
-        <div class="project-technologies">
-            <span class="tech-tag">MATLAB/Simulink</span>
-            <span class="tech-tag">Calcul fractionnaire</span>
-            <span class="tech-tag">Contrôle adaptatif</span>
-            <span class="tech-tag">Mode glissant</span>
-            <span class="tech-tag">Neuro-flou</span>
-            <span class="tech-tag">Algorithmes génétiques</span>
-        </div>
-        
-        <div class="project-features">
-            <h4>Principales réalisations :</h4>
-            <ul>
-                <li>Modélisation du système glucose-insuline avec calcul fractionnaire</li>
-                <li>Conception de 3 contrôleurs avancés (MRAC, FOSMC, ANFIS)</li>
-                <li>Implémentation d'observateur robuste pour l'estimation glycémique</li>
-                <li>Optimisation des paramètres par algorithme génétique</li>
-                <li>Validation via tests de robustesse (repas, bruit, variabilité)</li>
-            </ul>
-        </div>
-        
-        <div class="project-publication">
-            <h4>Publication scientifique :</h4>
-            <div class="publication-item">
-                <strong>Fractional-Order Indirect Model Reference Adaptive Control Design for Type 1 Diabetes Glucose Regulation</strong>
-                <br>
-                <em>S. Bensalem, A. Boukaba, S. Ladaci</em>
-                <br>
-                <span class="conference-badge">Accepté</span> IFAC International Conference on Fractional Differentiation and its Applications (ICFDA 2025)
-                <br>
-                <span class="conference-location">Alger, Algérie - Décembre 2025</span>
-            </div>
-        </div>
-    </div>
-</div>
-                <!-- Projet Pancréas Artificiel - Séminaire -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3 class="project-title">Contrôle Adaptatif Optimisé de Référence Modèle pour la Glycémie dans le Diabète de Type 1</h3>
-                        <div class="project-date">Séminaire de Recherche - Mai-Juin 2024</div>
+                        <h3>Contrôle Adaptatif d'Ordre Fractionnaire pour Pancréas Artificiel</h3>
+                        <span class="project-year">2025</span>
                     </div>
-                    <p class="project-description">
-                        Conception et implémentation d'un contrôleur adaptatif optimisé pour un pancréas artificiel, visant à gérer le système glycémique humain. Utilisation d'un modèle identifié du système métabolique du glucose humain avec une stratégie de contrôle adaptatif développée pour s'ajuster dynamiquement aux variations individuelles des processus métaboliques.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Contrôle adaptatif MRAC</span>
-                        <span class="tech-tag">Optimisation</span>
-                        <span class="tech-tag">PID</span>
-                        <span class="tech-tag">Algorithmes d'optimisation</span>
-                        <span class="tech-tag">MATLAB/Simulink</span>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Développement d'un système de régulation glycémique autonome pour patients diabétiques de type 1 
+                            utilisant des techniques avancées de contrôle et modélisation fractionnaire.
+                        </p>
+                        
+                        <div class="project-technologies">
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                            <span class="tech-tag">Calcul fractionnaire</span>
+                            <span class="tech-tag">Contrôle adaptatif</span>
+                            <span class="tech-tag">Mode glissant</span>
+                            <span class="tech-tag">Neuro-flou</span>
+                            <span class="tech-tag">Algorithmes génétiques</span>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Principales réalisations :</h4>
+                            <ul>
+                                <li>Modélisation du système glucose-insuline avec calcul fractionnaire</li>
+                                <li>Conception de 3 contrôleurs avancés (MRAC, FOSMC, ANFIS)</li>
+                                <li>Implémentation d'observateur robuste pour l'estimation glycémique</li>
+                                <li>Optimisation des paramètres par algorithme génétique</li>
+                                <li>Validation via tests de robustesse (repas, bruit, variabilité)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-publication">
+                            <h4>Publication scientifique :</h4>
+                            <div class="publication-item">
+                                <strong>Fractional-Order Indirect Model Reference Adaptive Control Design for Type 1 Diabetes Glucose Regulation</strong>
+                                <br>
+                                <em>S. Bensalem, A. Boukaba, S. Ladaci</em>
+                                <br>
+                                <span class="conference-badge">Accepté</span> IFAC International Conference on Fractional Differentiation and its Applications (ICFDA 2025)
+                                <br>
+                                <span class="conference-location">Alger, Algérie - Décembre 2025</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/document/11037053" class="pub-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>Publication IEEE Xplore
-                        </a>
-                        <a href="https://afros2024.com/" class="pub-link" target="_blank">
-                            <i class="fas fa-globe"></i>Conférence AFROS 2024
-                        </a>
+                </div>
+
+                <!-- Projet Pancréas Artificiel - Séminaire AMÉLIORÉ -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>Commande Adaptative de la Concentration de Glucose dans le corps humain.</h3>
+                        <span class="project-year">2024</span>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                          Conception et implémentation d'un contrôleur pour un pancréas artificiel, destiné à la régulation du taux de glycémie chez les patients atteints de diabète de type 1.
+                          Utilisation du modèle minimal de Bergman pour la modélisation du système métabolique du glucose, et développement d'une loi de commande adaptative robuste capable de s'ajuster dynamiquement aux variations des paramètres métaboliques.
+                        </p>
+                        
+                        <div class="project-technologies">
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                            <span class="tech-tag">Contrôle adaptatif MRAC</span>
+                            <span class="tech-tag">Optimisation GWOA</span>
+                            <span class="tech-tag">Commande PID/MPC</span>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Réalisations principales :</h4>
+                            <ul>
+                                <li>Analyse comparative approfondie des modèles mathématiques de régulation glycémique (Pagurek, Ali, Hovorka, Bergman)</li>
+                                <li>Implémentation et simulation du modèle minimal de Bergman sous MATLAB/Simulink</li>
+                                <li>Développement de trois stratégies de contrôle : PID optimisé par l'algorithme Grey Wolf Optimizer (GWOA), Model Predictive Control (MPC) et Model Reference Adaptive Control (MRAC). </li>
+                                <li>Optimisation des paramètres PID par algorithme Grey Wolf (GWOA). </li>
+                                <li>Conception d'un contrôleur MRAC avec mécanisme d'adaptation basé sur la règle MIT. </li>
+                                <li>Validation comparative des performances via simulations sous MATLAB/Simulink, avec ajout de disturbances simulées (repas, perfusion d'insuline). </li>
+                                <li>Comparaison des performances de chaque contrôleur en termes de stabilité, robustesse et précision du suivi de consigne. </li>
+                            </ul>
+                        
+                        
+                        <div class="project-publication">
+                            <h4>Publication scientifique :</h4>
+                            <div class="publication-item">
+                                <strong>An Optimized Model-Reference Blood Glucose Adaptive Control for Type 1 Diabetes</strong>
+                                <br>
+                                <em>Abir Boukaba; Serine Bensalem; Samir Ladaci</em>
+                                <br>
+                                <span class="conference-badge">Publié</span> 2024 International Conference of the African Federation of Operational Research Societies (AFROS)
+                                <br>
+                                <span class="conference-location">IEEE Xplore - 29 Full Text Views</span>
+                            </div>
+                            <div class="publication-links">
+                                <a href="https://ieeexplore.ieee.org/document/11037053" class="pub-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Accéder à la publication IEEE Xplore
+                                </a>
+                                <a href="https://afros2024.com/" class="pub-link" target="_blank">
+                                    <i class="fas fa-globe"></i>Conférence AFROS 2024
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Projet Robot Mobile -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3 class="project-title">Conception et Commande d'un Robot Mobile Différentiel</h3>
-                        <div class="project-date">Janvier 2025</div>
+                        <h3>Conception et Commande d'un Robot Mobile Différentiel</h3>
+                        <span class="project-year">2025</span>
                     </div>
                     <p class="project-description">
                         Modélisation et contrôle d'un robot mobile suiveur de ligne. Exploration de différentes stratégies de commande incluant les méthodes de Lyapunov, la commande par mode glissant et le contrôle par réseau de neurones artificiels. Simulation complète du robot sous ROS 2 et Gazebo.
@@ -1285,8 +1276,8 @@
                 <!-- Projet Quadrotor -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3 class="project-title">Modélisation et Commande d'un Quadrotor UAV par Quaternions</h3>
-                        <div class="project-date">Décembre 2024</div>
+                        <h3>Modélisation et Commande d'un Quadrotor UAV par Quaternions</h3>
+                        <span class="project-year">2024</span>
                     </div>
                     <p class="project-description">
                         Modélisation et contrôle d'un drone quadrotor en utilisant les quaternions pour éviter les singularités des angles d'Euler. Mise en œuvre de différentes techniques de commande (backstepping, PID, mode glissant) pour assurer la stabilité et le suivi de trajectoire.
@@ -1303,8 +1294,8 @@
                 <!-- Projet FPGA avec vidéo -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3 class="project-title">Conception d'un Compteur-Décompteur BCD 8421 sur Carte FPGA</h3>
-                        <div class="project-date">Mai 2023</div>
+                        <h3>Conception d'un Compteur-Décompteur BCD 8421 sur Carte FPGA</h3>
+                        <span class="project-year">2023</span>
                     </div>
                     <p class="project-description">
                         Réalisation d'un compteur-décompteur BCD 8 bits en VHDL sur une carte de développement FPGA Elbert V2 - Spartan 3A. Ce projet inclut l'adaptation de l'horloge, l'affichage sur LEDs et afficheurs 7 segments, et l'implémentation de multiplexeurs pour la gestion de l'affichage, permettant le comptage de 0 à 99 avec réinitialisation automatique.
@@ -1327,8 +1318,8 @@
                 <!-- Compétition -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3 class="project-title">Algeria Data Cup 2023</h3>
-                        <div class="project-date">Juin 2023 - 2ème Place</div>
+                        <h3>Algeria Data Cup 2023</h3>
+                        <span class="project-year">2023</span>
                     </div>
                     <p class="project-description">
                         Classée 2ème dans un datathon de data science, avec application de techniques avancées de machine learning (forêts aléatoires) pour résoudre des problématiques réelles de data science.
@@ -1496,5 +1487,3 @@
     </script>
 </body>
 </html>
-
-
