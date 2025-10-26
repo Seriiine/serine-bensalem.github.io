@@ -729,7 +729,7 @@
         }
         
         /* Styles pour la modal */
-        .modal {
+       .modal {
             display: none;
             position: fixed;
             z-index: 1000;
@@ -737,21 +737,22 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: #f8f9fa;
+            background-color: rgba(0, 0, 0, 0.5); /* Changé ici */
             animation: fadeIn 0.3s;
         }
 
         .modal-content {
-            background-color: #f8f9fa;
-            margin: 5% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 900px;
-            position: relative;
-            animation: slideIn 0.3s;
-        }
-
+                background-color: #f8f9fa;
+                margin: 5% auto;
+                padding: 20px;
+                border-radius: 10px;
+                width: 80%;
+                max-width: 900px;
+                position: relative;
+                animation: slideIn 0.3s;
+                border: none; /* Ajoutez cette ligne pour enlever le contour */
+                box-shadow: none; /* Au cas où il y aurait une ombre noire */
+            }
         .close-modal {
             position: absolute;
             right: 15px;
@@ -759,12 +760,12 @@
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
-            color: #aaa;
+            color: #333; /* Changé pour être visible sur fond clair */
             z-index: 1001;
         }
 
         .close-modal:hover {
-            color: #f8f9fa;
+            color: #000; /* Changé pour être visible */
         }
 
         .view-certificate-btn {
@@ -1358,7 +1359,7 @@
                                     <i class="fas fa-globe"></i>Conférence AFROS 2024
                                 </a>
                                 <!-- Bouton pour le certificat -->
-                                <button class="view-certificate-btn" data-pdf="Bensalem-afros24-certificate.pdf" style="margin: 0;">
+                                <button class="view-certificate-btn" data-pdf="bensalem-afros24-certificate.pdf" style="margin: 0;">
                                     📄 Voir le certificat
                                 </button>
                             </div>
@@ -1723,4 +1724,3 @@
     </script>
 </body>
 </html>
-
