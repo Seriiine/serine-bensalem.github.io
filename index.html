@@ -726,6 +726,70 @@
         .contact-icon {
             font-size: 1.5rem;
         }
+        
+        /* Styles pour la modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            position: relative;
+            animation: slideIn 0.3s;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+            z-index: 1001;
+        }
+
+        .close-modal:hover {
+            color: #000;
+        }
+
+        .view-certificate-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .view-certificate-btn:hover {
+            background: #0056b3;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -845,6 +909,49 @@
             </div>
         </div>
     </nav>
+    <!-- Modal pour visualiser les certificats PDF -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('pdfModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // Ouvrir la modal quand on clique sur un bouton
+            document.querySelectorAll('.view-certificate-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const pdfPath = this.getAttribute('data-pdf');
+                    pdfViewer.src = pdfPath;
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Empêche le scroll
+                });
+            });
+            
+            // Fermer la modal avec le bouton X
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                pdfViewer.src = ''; // Vide le viewer
+            });
+            
+            // Fermer la modal en cliquant à l'extérieur
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    pdfViewer.src = '';
+                }
+            });
+            
+            // Fermer avec la touche Echap
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    pdfViewer.src = '';
+                }
+            });
+        });
+        </script>
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
@@ -875,9 +982,7 @@
                 <!-- Stage CDTA -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            CDTA
-                        </div>
+                        <img src="LOGO-CDTA.png" alt="CDTA">
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -903,9 +1008,7 @@
                 <!-- Stage Schneider Electric -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            Schneider
-                        </div>
+                        <img src="schneider-logo.png" alt="schneider-logo">
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -933,9 +1036,7 @@
                 <!-- Stage SAIDAL -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            SAIDAL
-                        </div>
+                        <img src="SAIDAL-logo.png" alt="SAIDAL-logo">
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -961,9 +1062,7 @@
                 <!-- Stage Bomare -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            Bomare
-                        </div>
+                        <img src="Bomare-logo.png" alt="Bomare-logo">
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -989,9 +1088,7 @@
                 <!-- Stage Siemens -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            Siemens
-                        </div>
+                        <img src="siemens-logo.png" alt="siemens-logo" >
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -1026,9 +1123,7 @@
                 <!-- Master 2 - AVEC LOGO -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            Paris-Saclay
-                        </div>
+                        <img src="paris-saclay-logo.png" alt="Université Évry Paris-Saclay">
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1057,9 +1152,7 @@
                 <!-- Diplôme d'ingénieur - AVEC LOGO -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            ENP
-                        </div>
+                        <div img src="Logo-ENP.png" alt="École Nationale Polytechnique d'Alger" >
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1087,9 +1180,7 @@
                 <!-- Classes préparatoires - AVEC LOGO -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; color: #6c757d; font-size: 0.7rem; text-align: center;">
-                            ENP
-                        </div>
+                        <img src="Logo-ENP.png" alt="École Nationale Polytechnique d'Alger" >
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1159,28 +1250,33 @@
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Conception et implémentation d'un contrôleur pour un pancréas artificiel, destiné à la régulation du taux de glycémie chez les patients atteints de diabète de type 1. Utilisation du modèle minimal de Bergman pour la modélisation du système métabolique du glucose, et développement d'une loi de commande adaptative robuste capable de s'ajuster dynamiquement aux variations des paramètres métaboliques.
+                            Développement de techniques de commande robuste pour pancréas artificiel visant 
+                            à réguler la glycémie chez les patients diabétiques de type 1, incluant l'étude 
+                            de la modélisation d'ordre fractionnaire du modèle minimal de Bergman avec validation sur données réelles, 
+                            et l'implémentation de stratégies de contrôle avancé telles que la commande adaptative à modèle
+                             de référence (MRAC), le mode glissant d'ordre fractionnaire (FOSMC) avec observateur robuste, 
+                            et un contrôleur neuro-flou adaptatif (ANFIS) optimisé par algorithme génétique.
                         </p>
                         
                         <div class="project-technologies">
                             <span class="tech-tag">MATLAB/Simulink</span>
+                            <span class="tech-tag">Commande fractionnaire</span>
                             <span class="tech-tag">Contrôle adaptatif MRAC</span>
-                            <span class="tech-tag">Optimisation GWOA</span>
-                            <span class="tech-tag">Commande PID/MPC</span>
+                            <span class="tech-tag">Mode glissant FOSMC</span>
+                            <span class="tech-tag">Optimisation génétique</span>
+                            <span class="tech-tag">Systèmes neuro-flous ANFIS</span>
                         </div>
                         
                         <div class="project-features">
                             <h4>Principales réalisations :</h4>
                             <ul>
-                                <li>Analyse comparative approfondie des modèles mathématiques de régulation glycémique (Pagurek, Ali, Hovorka, Bergman)</li>
-                                <li>Implémentation et simulation du modèle minimal de Bergman sous MATLAB/Simulink</li>
-                                <li>Développement de trois stratégies de contrôle : PID optimisé par l'algorithme Grey Wolf Optimizer (GWOA), Model Predictive Control (MPC) et Model Reference Adaptive Control (MRAC). </li>
-                                <li>Optimisation des paramètres PID par algorithme Grey Wolf (GWOA). </li>
-                                <li>Conception d'un contrôleur MRAC avec mécanisme d'adaptation basé sur la règle MIT. </li>
-                                <li>Validation comparative des performances via simulations sous MATLAB/Simulink, avec ajout de disturbances simulées (repas, perfusion d'insuline). </li>
-                                <li>Comparaison des performances de chaque contrôleur en termes de stabilité, robustesse et précision du suivi de consigne. </li>
-
-                            </ul>
+                                <li>Modélisation fractionnaire du système gluco-insulinique basée sur le modèle minimal de Bergman avec validation sur données réelles</li>
+                                <li>Conception d'un contrôleur adaptatif indirect MRAC (Model Reference Adaptive Control) avec analyse de stabilité par la méthode de Lyapunov</li>
+                                <li>Développement d'un contrôleur par mode glissant d'ordre fractionnaire FOSMC (Fractional Order Sliding Mode Control) avec observateur robuste pour l'estimation de la glycémie</li>
+                                <li>Implémentation d'un contrôleur neuro-flou adaptatif ANFIS (Adaptive Neuro-Fuzzy Inference Systems) optimisé par apprentissage</li>
+                                <li>Optimisation des paramètres des contrôleurs par algorithme génétique sous contraintes physiologiques</li>
+                                <li>Validation comparative des performances via simulations sous MATLAB/Simulink avec tests de robustesse avancés</li>
+                             </ul>
                         </div>
                         
                         <div class="project-publication">
@@ -1203,6 +1299,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
                 <div class="projects-single-column">
                 <!-- Projet Pancréas Artificiel - Séminaire -->
                 <div class="project-item">
@@ -1213,27 +1313,26 @@
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Développement d'un système de régulation glycémique autonome pour patients diabétiques de type 1 
-                            utilisant des techniques avancées de contrôle et modélisation fractionnaire.
+                            Conception et implémentation d'un contrôleur pour un pancréas artificiel, destiné à la régulation du taux de glycémie chez les patients atteints de diabète de type 1. Utilisation du modèle minimal de Bergman pour la modélisation du système métabolique du glucose, et développement d'une loi de commande adaptative robuste capable de s'ajuster dynamiquement aux variations des paramètres métaboliques.
                         </p>
                         
                         <div class="project-technologies">
                             <span class="tech-tag">MATLAB/Simulink</span>
-                            <span class="tech-tag">Calcul fractionnaire</span>
-                            <span class="tech-tag">Contrôle adaptatif</span>
-                            <span class="tech-tag">Mode glissant</span>
-                            <span class="tech-tag">Neuro-flou</span>
-                            <span class="tech-tag">Algorithmes génétiques</span>
+                            <span class="tech-tag">Contrôle adaptatif MRAC</span>
+                            <span class="tech-tag">Optimisation GWOA</span>
+                            <span class="tech-tag">Commande PID/MPC</span>
                         </div>
                         
                         <div class="project-features">
                             <h4>Principales réalisations :</h4>
                             <ul>
-                                <li>Modélisation du système glucose-insuline avec calcul fractionnaire</li>
-                                <li>Conception de 3 contrôleurs avancés (MRAC, FOSMC, ANFIS)</li>
-                                <li>Implémentation d'observateur robuste pour l'estimation glycémique</li>
-                                <li>Optimisation des paramètres par algorithme génétique</li>
-                                <li>Validation via tests de robustesse (repas, bruit, variabilité)</li>
+                                <li>Analyse comparative approfondie des modèles mathématiques de régulation glycémique (Pagurek, Ali, Hovorka, Bergman)</li>
+                                <li>Implémentation et simulation du modèle minimal de Bergman sous MATLAB/Simulink</li>
+                                <li>Développement de trois stratégies de contrôle : PID optimisé par l'algorithme Grey Wolf Optimizer (GWOA), Model Predictive Control (MPC) et Model Reference Adaptive Control (MRAC). </li>
+                                <li>Optimisation des paramètres PID par algorithme Grey Wolf (GWOA). </li>
+                                <li>Conception d'un contrôleur MRAC avec mécanisme d'adaptation basé sur la règle MIT. </li>
+                                <li>Validation comparative des performances via simulations sous MATLAB/Simulink, avec ajout de disturbances simulées (repas, perfusion d'insuline). </li>
+                                <li>Comparaison des performances de chaque contrôleur en termes de stabilité, robustesse et précision du suivi de consigne. </li>
                             </ul>
                         </div>
                         
@@ -1263,65 +1362,152 @@
 
 
                 <!-- Projet Robot Mobile -->
+               <div class="projects-single-column">
+                <!-- Mobile Robotic -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3>Conception et Commande d'un Robot Mobile Différentiel</h3>
-                        <span class="project-year">2025</span>
-                    </div>
-                    <p class="project-description">
-                        Modélisation et contrôle d'un robot mobile suiveur de ligne. Exploration de différentes stratégies de commande incluant les méthodes de Lyapunov, la commande par mode glissant et le contrôle par réseau de neurones artificiels. Simulation complète du robot sous ROS 2 et Gazebo.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">ROS 2</span>
-                        <span class="tech-tag">Gazebo</span>
-                        <span class="tech-tag">Lyapunov</span>
-                        <span class="tech-tag">Mode glissant</span>
-                        <span class="tech-tag">Réseaux de neurones</span>
-                        <span class="tech-tag">Commande non linéaire</span>
-                    </div>
-                </div>
-
-                <!-- Projet Quadrotor -->
-                <div class="project-item">
-                    <div class="project-header">
-                        <h3>Modélisation et Commande d'un Quadrotor UAV par Quaternions</h3>
+                        <h3>Modélisation et Commande d'un Robot Mobile à Deux Roues Différentielles </h3>
                         <span class="project-year">2024</span>
                     </div>
-                    <p class="project-description">
-                        Modélisation et contrôle d'un drone quadrotor en utilisant les quaternions pour éviter les singularités des angles d'Euler. Mise en œuvre de différentes techniques de commande (backstepping, PID, mode glissant) pour assurer la stabilité et le suivi de trajectoire.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">Quaternions</span>
-                        <span class="tech-tag">Backstepping</span>
-                        <span class="tech-tag">PID</span>
-                        <span class="tech-tag">Mode glissant</span>
-                        <span class="tech-tag">MATLAB/Simulink</span>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                           Conception et implémentation d'un robot autonome suiveur de ligne utilisant ROS 2,
+                            Gazebo et MATLAB/Simulink. Développement et comparaison de plusieurs stratégies de 
+                            commande avancées pour assurer une navigation précise et robuste.
+                        </p>
+                        
+                        <div class="project-technologies">
+                            <span class="tech-tag">ROS 2</span>
+                            <span class="tech-tag">Gazebo</span>
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Commande Robuste</span>
+                            <span class="tech-tag">Réseaux de Neurones</span>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Principales réalisations :</h4>
+                            <ul>
+                                <li>Modélisation cinématique du robot à deux roues différentielles</li>
+                                <li>Implémentation et comparaison de 4 techniques de commande avancées 
+                                    (Lyapunov, Backstepping, Sliding Mode, Réseaux de Neurones)</li>
+                                <li>Création et simulation du robot dans Gazebo à l'aide de URDF et de plugins ROS 2</li>
+                                <li>Entraînement et déploiement d'un réseau de neurones pour la commande adaptative</li>
+                                <li>Validation des performances via des simulations numériques et des tests en environnement virtuel</li>
+                            </ul>
+                        </div>
+                        
+               
                     </div>
                 </div>
+                           
 
-                <!-- Projet FPGA avec vidéo -->
+                <!-- Projet Quadrotor -->
+               <div class="projects-single-column">
+                <!-- Projet AAV -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3>Conception d'un Compteur-Décompteur BCD 8421 sur Carte FPGA</h3>
-                        <span class="project-year">2023</span>
-                    </div>
-                    <p class="project-description">
-                        Réalisation d'un compteur-décompteur BCD 8 bits en VHDL sur une carte de développement FPGA Elbert V2 - Spartan 3A. Ce projet inclut l'adaptation de l'horloge, l'affichage sur LEDs et afficheurs 7 segments, et l'implémentation de multiplexeurs pour la gestion de l'affichage, permettant le comptage de 0 à 99 avec réinitialisation automatique.
-                    </p>
-                    <div class="project-technologies">
-                        <span class="tech-tag">VHDL</span>
-                        <span class="tech-tag">FPGA</span>
-                        <span class="tech-tag">Spartan 3A</span>
-                        <span class="tech-tag">Logique numérique</span>
+                        <h3>Modélisation Dynamique et Commande d'un Quadrirotor UAV par Quaternions. </h3>
+                        <span class="project-year">2024</span>
                     </div>
                     
-                    <div class="video-container">
-                        <video controls style="width: 100%; border-radius: 10px;">
-                         <source src="projet-fpga-compteur.mp4" type="video/mp4">
-                         Votre navigateur ne supporte pas la lecture de vidéos.
-                        </video>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Développement d'un modèle dynamique complet d'un drone quadrirotor
+                             utilisant la représentation par quaternions pour éviter les 
+                             singularités des angles d'Euler. Conception et implémentation de 
+                             plusieurs stratégies de commande avancée pour stabiliser ce système 
+                             sous-actionné et assurer le suivi de trajectoire.
+                        </p>
+                        
+                        <div class="project-technologies">
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                            <span class="tech-tag">Quaternions</span>
+                            <span class="tech-tag">Commande Non-Linéaire</span>
+                            <span class="tech-tag">Backstepping</span>
+                            <span class="tech-tag">Sliding Mode</span>
+                            <span class="tech-tag">Lyapunov</span>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Principales réalisations :</h4>
+                            <ul>
+                                <li>Modélisation dynamique complète du quadrirotor utilisant
+                                     les équations de Newton-Euler</li>
+                                <li>Implémentation de la représentation par quaternions pour l'attitude,
+                                     éliminant le problème de blocage de cardan</li>
+                                <li>Développement d'une architecture de commande cascadée avec boucles interne
+                                     (attitude) et externe (position)</li>
+                                <li>Conception et comparaison de 4 techniques de commande : Backstepping, 
+                                    Gain Scheduling, Sliding Mode, et PID</li>
+                                <li>Implémentation d'un contrôleur Backstepping avec PID pour la stabilisation 
+                                    et le suivi de trajectoire</li>
+                                <li>Tests de robustesse avec perturbations (vent) et analyse comparative 
+                                    des performances</li>
+                                <li>Intégration de la dynamique des rotors et modélisation 
+                                    de l'unité de mesure inertielle (IMU)</li>
+                                
+                            </ul>
+                        </div>
+                        
+               
                     </div>
                 </div>
+                           
+                <!-- Projet FPGA avec vidéo -->
+                <div class="projects-single-column">
+                <!-- Projet Pancréas Artificiel - Séminaire -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>Conception et Implémentation d'un Compteur BCD 8421 sur FPGA. </h3>
+                        <span class="project-year">2023</span>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                           Développement d'un compteur numérique BCD 8421 de 0 à 99 implémenté
+                            sur carte FPGA Spartan 3A. Conception VHDL complète incluant la gestion
+                             d'horloge, l'affichage 7 segments et le multiplexage pour une visualisation optimale.
+                        </p>
+                        
+                        <div class="project-technologies">
+                           <span class="tech-tag">VHDL</span>
+                            <span class="tech-tag">FPGA</span>
+                            <span class="tech-tag">Xilinx ISE</span>
+                            <span class="tech-tag">Spartan 3A</span>
+                            <span class="tech-tag">Systèmes Numériques</span>
+                            
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Principales réalisations :</h4>
+                            <ul>
+                                <li>Conception architecturale d'un compteur BCD 8421 8 bits
+                                     (0-99) avec reset</li>
+                                <li>Implémentation d'un diviseur de fréquence pour
+                                     adapter l'horloge de 12MHz à 1Hz</li>
+                                <li>Développement du driver d'affichage pour écrans 7
+                                     segments à cathode commune</li>
+                                <li>Mise en œuvre d'un système de multiplexage temporel
+                                     pour l'affichage multiple</li>
+                                <li>Programmation VHDL modulaire avec séparation des fonctionnalités 
+                                    (horloge, comptage, affichage)</li>
+                                <li>Tests et validation sur carte de développement 
+                                    Elbert V2 - Spartan 3A FPGA</li>
+ 
+                                
+                            </ul>
+                        </div>
+                        <div class="video-container">
+                            <video controls style="width: 100%; border-radius: 10px;">
+                                <source src="projet-fpga-compteur.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de vidéos.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                           
 
                 <!-- Compétition -->
                 <div class="project-item">
@@ -1330,16 +1516,37 @@
                         <span class="project-year">2023</span>
                     </div>
                     <p class="project-description">
-                        Classée 2ème dans un datathon de data science, avec application de techniques avancées de machine learning (forêts aléatoires) pour résoudre des problématiques réelles de data science.
+                        Classée 2ème lors de ce datathon national,
+                         en développant des solutions de machine learning pour résoudre des
+                          problématiques business critiques proposées par des entreprises leaders.
                     </p>
                     <div class="project-technologies">
                         <span class="tech-tag">Machine Learning</span>
                         <span class="tech-tag">Data Science</span>
-                        <span class="tech-tag">Forêts Aléatoires</span>
+                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Regression Logistique</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
                         <span class="tech-tag">Python</span>
                     </div>
+                    <!-- Bouton pour ouvrir le certificat -->
+                    <div class="project-certificate">
+                        <button class="view-certificate-btn" data-pdf="BENSALEM_ADC.pdf">
+                            📄 Voir le certificat
+                        </button>
+                    </div>
+                    <!-- Modal pour afficher le PDF (à placer à la fin de votre body) -->
+                    <div id="pdfModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <embed id="pdfViewer" src="" type="application/pdf" width="100%" height="600px">
+                            <p style="text-align: center; margin-top: 10px; color: #666;">
+                                Si le PDF ne s'affiche pas, <a href="#" id="downloadPdf">téléchargez-le ici</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -1364,7 +1571,7 @@
                     <ul class="skill-list">
                         <li>ROS 2</li>
                         <li>KUKA</li>
-                        <li>Automates Siemens</li>
+                        <li>Automates Siemens et Schneider</li>
                         <li>Commande non linéaire</li>
                         <li>Q-learning</li>
                     </ul>
