@@ -193,38 +193,18 @@
             opacity: 0.7;
         }
 
-        /* Hero Section avec photo de couverture - HAUTEUR RÉDUITE */
+        /* Hero Section SANS BANNIÈRE */
         .hero {
             position: relative;
-            height: 50vh; /* Réduit de 70vh à 50vh */
-            min-height: 450px; /* Réduit de 500px à 450px */
+            height: 70vh;
+            min-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            z-index: -2;
-        }
-
-        .hero-bg-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.3;
-            z-index: -1;
         }
 
         .hero-content {
@@ -235,33 +215,33 @@
 
         /* PHOTO AGRANDIE */
         .profile-img {
-            width: 220px; /* Augmenté de 180px à 220px */
-            height: 220px; /* Augmenté de 180px à 220px */
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid white;
-            margin: 0 auto 25px; /* Marge réduite en bas */
+            margin: 0 auto 25px;
             background-color: #ddd;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .hero h1 {
             color: white;
-            font-size: 2.5rem; /* Légèrement réduit */
-            margin-bottom: 15px; /* Marge réduite */
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 25px; /* Marge réduite */
+            margin-bottom: 25px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .social-links {
-            margin-top: 25px; /* Marge réduite */
+            margin-top: 25px;
         }
 
         .social-links a {
@@ -799,7 +779,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Changé ici */
+            background-color: rgba(255, 255, 255, 0.5);
             animation: fadeIn 0.3s;
         }
 
@@ -812,8 +792,8 @@
             max-width: 900px;
             position: relative;
             animation: slideIn 0.3s;
-            border: none; /* Ajoutez cette ligne pour enlever le contour */
-            box-shadow: none; /* Au cas où il y aurait une ombre noire */
+            border: none;
+            box-shadow: none;
             }
         .close-modal {
             position: absolute;
@@ -822,18 +802,18 @@
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
-            color: #333; /* Changé pour être visible sur fond clair */
+            color: #333;
             z-index: 1001;
         }
 
         .close-modal:hover {
-            color: #000; /* Changé pour être visible */
+            color: #000;
         }
 
         .view-certificate-btn {
             display: inline-block;
             margin: 5px 10px 5px 0;
-            padding: 10px 18px; /* Augmenté le padding */
+            padding: 10px 18px;
             background: #f8f9fa;
             border-radius: 5px;
             text-decoration: none;
@@ -841,14 +821,14 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
-            font-size: 1rem; /* Taille de police augmentée */
-            font-weight: 600; /* Texte en gras */
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .view-certificate-btn:hover {
             background: #e9ecef;
             text-decoration: none;
-            transform: translateY(-2px); /* Effet de survol */
+            transform: translateY(-2px);
         }
 
         /* Modal vidéo spécifique */
@@ -919,7 +899,7 @@
             }
 
             .hero {
-                height: 50vh; /* Ajustement pour mobile */
+                height: 50vh;
                 min-height: 400px;
             }
 
@@ -932,7 +912,7 @@
             }
 
             .profile-img {
-                width: 180px; /* Légèrement réduit sur mobile */
+                width: 180px;
                 height: 180px;
             }
 
@@ -1002,7 +982,7 @@
 
             /* Boutons responsive */
             .view-certificate-btn {
-                font-size: 0.9rem; /* Légèrement plus petit sur mobile */
+                font-size: 0.9rem;
                 padding: 8px 15px;
             }
         }
@@ -1040,11 +1020,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section avec photo de couverture - HAUTEUR RÉDUITE -->
+    <!-- Hero Section SANS BANNIÈRE -->
     <section id="accueil" class="hero">
-        <div class="hero-bg"></div>
-        <!-- Remplacez "votre-photo-couverture.jpg" par le chemin de votre photo -->
-        <img src="photo-couverture.jpg" alt="Photo de couverture" class="hero-bg-image">
         <div class="hero-content">
             <!-- PHOTO AGRANDIE -->
             <div class="profile-img"></div>
