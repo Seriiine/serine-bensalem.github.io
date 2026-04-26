@@ -193,7 +193,7 @@
             opacity: 0.7;
         }
 
-        /* Hero Section SANS BANNIÈRE */
+        /* Hero Section */
         .hero {
             position: relative;
             height: 50vh;
@@ -212,18 +212,6 @@
             z-index: 1;
             max-width: 800px;
             padding: 0 20px;
-        }
-
-        /* PHOTO AGRANDIE */
-        .profile-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            margin: 0 auto 25px;
-            background-color: #ddd;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .hero h1 {
@@ -398,7 +386,7 @@
             text-decoration: underline;
         }
 
-        /* Stages Section - Avec logos normalisés */
+        /* Stages Section */
         .stages {
             background-color: white;
         }
@@ -772,7 +760,7 @@
         }
         
         /* Styles pour la modal */
-       .modal {
+        .modal {
             display: none;
             position: fixed;
             z-index: 1000;
@@ -780,7 +768,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(0,0,0,0.7);
             animation: fadeIn 0.3s;
         }
 
@@ -793,9 +781,8 @@
             max-width: 900px;
             position: relative;
             animation: slideIn 0.3s;
-            border: none;
-            box-shadow: none;
-            }
+        }
+
         .close-modal {
             position: absolute;
             right: 15px;
@@ -830,6 +817,26 @@
             background: #e9ecef;
             text-decoration: none;
             transform: translateY(-2px);
+        }
+
+        .view-grades-btn {
+            display: inline-block;
+            margin: 10px 0 0 0;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .view-grades-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #219a52, #27ae60);
         }
 
         /* Modal vidéo spécifique */
@@ -913,11 +920,6 @@
                 font-size: 1rem;
             }
 
-            .profile-img {
-                width: 180px;
-                height: 180px;
-            }
-
             .education-item {
                 flex-direction: column;
                 text-align: center;
@@ -971,7 +973,6 @@
                 padding: 20px 15px;
             }
 
-            /* Modal responsive */
             #videoModal .modal-content {
                 width: 95%;
                 margin: 10% auto;
@@ -982,7 +983,6 @@
                 right: -15px;
             }
 
-            /* Boutons responsive */
             .view-certificate-btn {
                 font-size: 0.9rem;
                 padding: 8px 15px;
@@ -1022,18 +1022,17 @@
         </div>
     </nav>
 
-    <!-- Hero Section SANS BANNIÈRE -->
+    <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="hero-content">
             <h1>Serine Bensalem</h1>
-            <p>Étudiante en Master 2 Systèmes Automatiques Mobiles</p>
+            <p>Ingénieure en Automatique | Master 2 Systèmes Automatiques Mobiles</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn">Me contacter</a>
                 <a href="https://orcid.org/0009-0003-1643-4743" class="btn" style="background: #a6ce39; border: none;" target="_blank">
                     <i class="fab fa-orcid"></i> ORCID
                 </a>
             </div>
-            <!-- ICÔNES RÉTABLIES -->
             <div class="social-links">
                 <a href="mailto:serina.bensalem@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/serine-bensalem-7136b1191/"><i class="fab fa-linkedin"></i></a>
@@ -1046,20 +1045,46 @@
         <div class="container">
             <h2>À propos de moi</h2>
             <div class="about-content">
-                <p>Étudiante en Master 2 Systèmes Automatiques Mobiles à l'Université d'Évry – Paris-Saclay et diplômée de l'École Nationale Polytechnique d'Alger, je suis passionnée par la robotique, la commande et l'intelligence artificielle.</p>
+                <p>Ingénieure en automatique diplômée de l'École Nationale Polytechnique et finalisant un Master 2 "Systèmes Automatiques Mobiles" à l'Université d'Évry – Paris-Saclay, je suis passionnée par la robotique, la commande et l'intelligence artificielle.</p>
                 
-                <p>Mon parcours m'a permis de développer une solide compréhension des systèmes autonomes et intelligents à travers des modules tels que la commande non linéaire, la vision par ordinateur, la robotique mobile et la commande adaptative. J'ai également pu explorer les interactions entre automatique et apprentissage machine, notamment à travers des projets liant Q-learning, ROS 2 et robotique collaborative.</p>
+                <p>Mon parcours m'a permis de forger une solide expertise des systèmes autonomes à travers des domaines tels que la commande non linéaire, la vision par ordinateur et la robotique mobile. J'ai également exploré la synergie entre automatique et apprentissage machine, notamment par l'optimisation de trajectoires via Q-learning et l'intégration sur ROS 2 en robotique collaborative.</p>
                 
-                <p>Animée par l'envie de concevoir des solutions innovantes à la croisée de l'automatique et de l'IA, je recherche actuellement un stage de fin d'études où je pourrai mettre en pratique mes compétences en modélisation, contrôle et robotique tout en relevant des défis industriels concrets.</p>
+                <p>Actuellement en stage de fin d'études chez Safran Electronics & Defense, je conçois des modèles analytiques et des lois de commande pour le pilotage d'un système optique complexe (diasporamètre motorisé). Animée par l'envie de développer des solutions innovantes à la croisée de l'automatique et de la perception, je recherche un CDI à partir de septembre 2026 pour mettre mon expertise technique au service de défis industriels ambitieux.</p>
             </div>
         </div>
     </section>
 
-    <!-- Section Stages - Une seule colonne AVEC LOGOS ET LIENS -->
+    <!-- Section Stages / Expériences Professionnelles -->
     <section id="stages" class="stages">
         <div class="container">
             <h2>Expériences Professionnelles</h2>
             <div class="projects-single-column">
+                <!-- Stage Safran (nouveau) -->
+                <div class="stage-item">
+                    <div class="stage-logo">
+                        <img src="safran-logo.png" alt="Safran">
+                    </div>
+                    <div class="stage-content">
+                        <div class="stage-header">
+                            <div>
+                                <h3 class="stage-title">Stage de fin d'études - Ingénieure en Automatique</h3>
+                                <a href="https://www.safran-group.com/" class="stage-company">Safran Electronics & Defense</a>
+                            </div>
+                            <div class="stage-date">Mars 2026 - Août 2026</div>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Étude approfondie et modélisation analytique d'un système optique à deux prismes (diasporamètre)</li>
+                            <li>Développement d'une loi de contrôle pour le pilotage de l'axe optique répondant aux critères de performance, stabilité et embarquabilité</li>
+                        </ul>
+                        <div class="stage-skills">
+                            <span class="skill-tag">Modélisation analytique</span>
+                            <span class="skill-tag">Commande optimale</span>
+                            <span class="skill-tag">Systèmes optiques</span>
+                            <span class="skill-tag">MATLAB/Simulink</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Stage CDTA -->
                 <div class="stage-item">
                     <div class="stage-logo">
@@ -1169,7 +1194,7 @@
                 <!-- Stage Siemens -->
                 <div class="stage-item">
                     <div class="stage-logo">
-                        <img src="siemens-logo.png" alt="siemens-logo" >
+                        <img src="siemens-logo.png" alt="siemens-logo">
                     </div>
                     <div class="stage-content">
                         <div class="stage-header">
@@ -1201,7 +1226,7 @@
         <div class="container">
             <h2>Formation et Parcours Académique</h2>
             <div class="education-grid">
-                <!-- Master 2 - AVEC LOGO -->
+                <!-- Master 2 -->
                 <div class="education-item">
                     <div class="education-logo">
                         <img src="paris-saclay-logo.png" alt="Université Évry Paris-Saclay">
@@ -1228,12 +1253,17 @@
                         </div>
                         <a href="https://www.universite-paris-saclay.fr/formation/master/electronique-energie-electrique-automatique/m2-systemes-automatiques-mobiles" class="education-link">Voir le programme de la formation →</a>
                     </div>
+                    <div>
+                            <button class="view-grades-btn" data-pdf="releve-notes-saclay.pdf">
+                                📊 Voir mon relevé de notes
+                            </button>
+                        </div>
                 </div>
 
-                <!-- Diplôme d'ingénieur - AVEC LOGO -->
+                <!-- Diplôme d'ingénieur -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <img src="Logo-ENP.png" alt="École Nationale Polytechnique d'Alger" >
+                        <img src="Logo-ENP.png" alt="École Nationale Polytechnique d'Alger">
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1244,10 +1274,7 @@
                             <div class="education-date">Sept. 2022 - Juin 2025</div>
                         </div>
                         <p class="education-description">
-                            <ul class="bullet-list">
-                                <li>Formation en automatique, robotique et systèmes industriels.</li>
-                                <li>Major de ma promotion avec une moyenne annuelle de 17.18.</li>
-                            </ul>
+                            Formation en automatique, robotique et systèmes industriels. Major de ma promotion avec une moyenne annuelle de 17.18.
                         </p>
                         <div class="education-modules">
                             <span class="module-tag">Systèmes asservis</span>
@@ -1259,14 +1286,21 @@
                             <span class="module-tag">Programmation des automates</span>
                             <span class="module-tag">Électronique de puissance et instrumentation</span>
                         </div>
-                        <a href="https://www.enp.edu.dz/storage/2020/09/Programme-Ingenieur-Automatique-2015.pdf" class="education-link">Voir le programme de la formation →</a>
+                        <div>
+                            <a href="https://www.enp.edu.dz/storage/2020/09/Programme-Ingenieur-Automatique-2015.pdf" class="education-link">Voir le programme de la formation →</a>
+                        </div>
+                        <div>
+                            <button class="view-grades-btn" data-pdf="releve-notes-enp.pdf">
+                                📊 Voir mon relevé de notes
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Classes préparatoires - AVEC LOGO -->
+                <!-- Classes préparatoires -->
                 <div class="education-item">
                     <div class="education-logo">
-                        <img src="Logo-ENP.png" alt="École Nationale Polytechnique d'Alger" >
+                        <img src="Logo-ENP.png" alt="École Nationale Polytechnique d'Alger">
                     </div>
                     <div class="education-content">
                         <div class="education-header">
@@ -1296,7 +1330,7 @@
                     </div>
                 </div>
 
-                <!-- Baccalauréat - SANS LOGO NI LIEN -->
+                <!-- Baccalauréat -->
                 <div class="education-item">
                     <div class="education-logo" style="background: #f8f9fa; border: 2px dashed #dee2e6;">
                         <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.7rem; text-align: center;"></div>
@@ -1340,7 +1374,7 @@
                             à réguler la glycémie chez les patients diabétiques de type 1, incluant l'étude 
                             de la modélisation d'ordre fractionnaire du modèle minimal de Bergman avec validation sur données réelles, 
                             et l'implémentation de stratégies de contrôle avancé telles que la commande adaptative à modèle
-                             de référence (MRAC), le mode glissant d'ordre fractionnaire (FOSMC) avec observateur robuste, 
+                            de référence (MRAC), le mode glissant d'ordre fractionnaire (FOSMC) avec observateur robuste, 
                             et un contrôleur neuro-flou adaptatif (ANFIS) optimisé par algorithme génétique.
                         </p>
                         
@@ -1377,20 +1411,21 @@
                                 <span class="conference-location"> Algérie - Décembre 2025</span>
                             </div>
                             <div class="publication-links">
-
                                 <a href="https://conferences.ifac-control.org/icfda2025/" class="pub-link" target="_blank">
-                                    <i class="fas fa-globe"></i> Conférence IFACA 2025 : Conference on Fractional Differentiation and its Applications
+                                    <i class="fas fa-globe"></i> Conférence IFACA 2025
                                 </a>
+                                <button class="view-certificate-btn" data-pdf="Bensalem-IFAC25-certificate.pdf">
+                                    📄 Voir le certificat
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="projects-single-column">
                 <!-- Projet Pancréas Artificiel - Séminaire -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3>Commande Adaptative de la Concentration de Glucose dans le corps humain.</h3>
+                        <h3>Commande Adaptative de la Concentration de Glucose dans le corps humain</h3>
                         <span class="project-year">2024</span>
                     </div>
                     
@@ -1411,11 +1446,11 @@
                             <ul>
                                 <li>Analyse comparative approfondie des modèles mathématiques de régulation glycémique (Pagurek, Ali, Hovorka, Bergman)</li>
                                 <li>Implémentation et simulation du modèle minimal de Bergman sous MATLAB/Simulink</li>
-                                <li>Développement de trois stratégies de contrôle : PID optimisé par l'algorithme Grey Wolf Optimizer (GWOA), Model Predictive Control (MPC) et Model Reference Adaptive Control (MRAC). </li>
-                                <li>Optimisation des paramètres PID par algorithme Grey Wolf (GWOA). </li>
-                                <li>Conception d'un contrôleur MRAC avec mécanisme d'adaptation basé sur la règle MIT. </li>
-                                <li>Validation comparative des performances via simulations sous MATLAB/Simulink, avec ajout de disturbances simulées (repas, perfusion d'insuline). </li>
-                                <li>Comparaison des performances de chaque contrôleur en termes de stabilité, robustesse et précision du suivi de consigne. </li>
+                                <li>Développement de trois stratégies de contrôle : PID optimisé par l'algorithme Grey Wolf Optimizer (GWOA), Model Predictive Control (MPC) et Model Reference Adaptive Control (MRAC)</li>
+                                <li>Optimisation des paramètres PID par algorithme Grey Wolf (GWOA)</li>
+                                <li>Conception d'un contrôleur MRAC avec mécanisme d'adaptation basé sur la règle MIT</li>
+                                <li>Validation comparative des performances via simulations sous MATLAB/Simulink, avec ajout de disturbances simulées (repas, perfusion d'insuline)</li>
+                                <li>Comparaison des performances de chaque contrôleur en termes de stabilité, robustesse et précision du suivi de consigne</li>
                             </ul>
                         </div>
                         
@@ -1438,8 +1473,7 @@
                                 <a href="https://afros2024.com/" class="pub-link" target="_blank">
                                     <i class="fas fa-globe"></i> Conférence AFROS 2024
                                 </a>
-                                <!-- Bouton pour le certificat -->
-                                <button class="view-certificate-btn" data-pdf="Bensalem-afros24-certificate.pdf" style="margin: 0;">
+                                <button class="view-certificate-btn" data-pdf="Bensalem-afros24-certificate.pdf">
                                     📄 Voir le certificat
                                 </button>
                             </div>
@@ -1448,11 +1482,9 @@
                 </div>
 
                 <!-- Projet Robot Mobile -->
-               <div class="projects-single-column">
-                <!-- Mobile Robotic -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3>Modélisation et Commande d'un Robot Mobile à Deux Roues Différentielles </h3>
+                        <h3>Modélisation et Commande d'un Robot Mobile à Deux Roues Différentielles</h3>
                         <span class="project-year">2024</span>
                     </div>
                     
@@ -1476,22 +1508,22 @@
                             <h4>Principales réalisations :</h4>
                             <ul>
                                 <li>Modélisation cinématique du robot à deux roues différentielles</li>
-                                <li>Implémentation et comparaison de 4 techniques de commande avancées 
-                                    (Lyapunov, Backstepping, Sliding Mode, Réseaux de Neurones)</li>
+                                <li>Implémentation et comparaison de 4 techniques de commande avancées (Lyapunov, Backstepping, Sliding Mode, Réseaux de Neurones)</li>
                                 <li>Création et simulation du robot dans Gazebo à l'aide de URDF et de plugins ROS 2</li>
                                 <li>Entraînement et déploiement d'un réseau de neurones pour la commande adaptative</li>
                                 <li>Validation des performances via des simulations numériques et des tests en environnement virtuel</li>
                             </ul>
                         </div>
+                        <button class="view-certificate-btn" data-pdf="certificat-robot-mobile.pdf">
+                            📄 Voir le certificat de participation
+                        </button>
                     </div>
                 </div>
                            
                 <!-- Projet Quadrotor -->
-               <div class="projects-single-column">
-                <!-- Projet AAV -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3>Modélisation Dynamique et Commande d'un Quadrirotor UAV par Quaternions. </h3>
+                        <h3>Modélisation Dynamique et Commande d'un Quadrirotor UAV par Quaternions</h3>
                         <span class="project-year">2024</span>
                     </div>
                     
@@ -1516,31 +1548,22 @@
                         <div class="project-features">
                             <h4>Principales réalisations :</h4>
                             <ul>
-                                <li>Modélisation dynamique complète du quadrirotor utilisant
-                                     les équations de Newton-Euler</li>
-                                <li>Implémentation de la représentation par quaternions pour l'attitude,
-                                     éliminant le problème de blocage de cardan</li>
-                                <li>Développement d'une architecture de commande cascadée avec boucles interne
-                                     (attitude) et externe (position)</li>
-                                <li>Conception et comparaison de 4 techniques de commande : Backstepping, 
-                                    Gain Scheduling, Sliding Mode, et PID</li>
-                                <li>Implémentation d'un contrôleur Backstepping avec PID pour la stabilisation 
-                                    et le suivi de trajectoire</li>
-                                <li>Tests de robustesse avec perturbations (vent) et analyse comparative 
-                                    des performances</li>
-                                <li>Intégration de la dynamique des rotors et modélisation 
-                                    de l'unité de mesure inertielle (IMU)</li>
+                                <li>Modélisation dynamique complète du quadrirotor utilisant les équations de Newton-Euler</li>
+                                <li>Implémentation de la représentation par quaternions pour l'attitude, éliminant le problème de blocage de cardan</li>
+                                <li>Développement d'une architecture de commande cascadée avec boucles interne (attitude) et externe (position)</li>
+                                <li>Conception et comparaison de 4 techniques de commande : Backstepping, Gain Scheduling, Sliding Mode, et PID</li>
+                                <li>Implémentation d'un contrôleur Backstepping avec PID pour la stabilisation et le suivi de trajectoire</li>
+                                <li>Tests de robustesse avec perturbations (vent) et analyse comparative des performances</li>
+                                <li>Intégration de la dynamique des rotors et modélisation de l'unité de mesure inertielle (IMU)</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                            
-                <!-- Projet FPGA avec vidéo -->
-                <div class="projects-single-column">
-                <!-- Projet Pancréas Artificiel - Séminaire -->
+                <!-- Projet FPGA -->
                 <div class="project-item">
                     <div class="project-header">
-                        <h3>Conception et Implémentation d'un Compteur BCD 8421 sur FPGA. </h3>
+                        <h3>Conception et Implémentation d'un Compteur BCD 8421 sur FPGA</h3>
                         <span class="project-year">2023</span>
                     </div>
                     
@@ -1562,29 +1585,22 @@
                         <div class="project-features">
                             <h4>Principales réalisations :</h4>
                             <ul>
-                                <li>Conception architecturale d'un compteur BCD 8421 8 bits
-                                     (0-99) avec reset</li>
-                                <li>Implémentation d'un diviseur de fréquence pour
-                                     adapter l'horloge de 12MHz à 1Hz</li>
-                                <li>Développement du driver d'affichage pour écrans 7
-                                     segments à cathode commune</li>
-                                <li>Mise en œuvre d'un système de multiplexage temporel
-                                     pour l'affichage multiple</li>
-                                <li>Programmation VHDL modulaire avec séparation des fonctionnalités 
-                                    (horloge, comptage, affichage)</li>
-                                <li>Tests et validation sur carte de développement 
-                                    Elbert V2 - Spartan 3A FPGA</li>
+                                <li>Conception architecturale d'un compteur BCD 8421 8 bits (0-99) avec reset</li>
+                                <li>Implémentation d'un diviseur de fréquence pour adapter l'horloge de 12MHz à 1Hz</li>
+                                <li>Développement du driver d'affichage pour écrans 7 segments à cathode commune</li>
+                                <li>Mise en œuvre d'un système de multiplexage temporel pour l'affichage multiple</li>
+                                <li>Programmation VHDL modulaire avec séparation des fonctionnalités (horloge, comptage, affichage)</li>
+                                <li>Tests et validation sur carte de développement Elbert V2 - Spartan 3A FPGA</li>
                             </ul>
                         </div>
                         
-                        <!-- Bouton pour ouvrir la vidéo - MÊME STYLE QUE LES CERTIFICATS -->
                         <button class="view-certificate-btn" data-video="projet-fpga-compteur.mp4">
                             🎬 Voir les résultats
                         </button>
                     </div>
                 </div>
                            
-                <!-- Compétition -->
+                <!-- Compétition Algeria Data Cup -->
                 <div class="project-item">
                     <div class="project-header">
                         <h3>Algeria Data Cup 2023</h3>
@@ -1600,19 +1616,17 @@
                         <span class="tech-tag">Data Science</span>
                         <span class="tech-tag">Random Forest</span>
                         <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">Regression Logistique</span>
+                        <span class="tech-tag">Régression Logistique</span>
                         <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">Pandas</span>
                         <span class="tech-tag">Python</span>
                     </div>
-                    <!-- Bouton pour ouvrir le certificat -->
-                    <!-- Classement et certificat sur la même ligne -->
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding: 12px; background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); border-radius: 8px; border-left: 4px solid #c0c0c0;">
                         <p style="margin: 0; font-weight: 600; color: #2c3e50;">
                             <i class="fas fa-trophy" style="color: #c0c0c0; margin-right: 8px;"></i>
                             2ème Place - Algeria Data Cup 2023
                         </p>
-                        <button class="view-certificate-btn" data-pdf="BENSALEM_ADC.pdf" style="margin: 0;">
+                        <button class="view-certificate-btn" data-pdf="BENSALEM_ADC.pdf">
                             📄 Voir le certificat
                         </button>
                     </div>
@@ -1633,6 +1647,7 @@
                         <li>C</li>
                         <li>Java</li>
                         <li>MATLAB/Simulink</li>
+                        <li>Maple</li>
                         <li>VHDL</li>
                         <li>HTML/CSS</li>
                     </ul>
@@ -1790,7 +1805,7 @@
         }
 
         window.addEventListener('resize', handleResize);
-        handleResize(); // Appel initial
+        handleResize();
 
         // Modal pour les certificats PDF et vidéos
         document.addEventListener('DOMContentLoaded', function() {
@@ -1798,20 +1813,24 @@
             const videoModal = document.getElementById('videoModal');
             const pdfViewer = document.getElementById('pdfViewer');
             const videoPlayer = document.getElementById('videoPlayer');
+            const downloadLink = document.getElementById('downloadPdf');
+            let currentPdfSrc = '';
             
             // Ouvrir les modals quand on clique sur un bouton
-            document.querySelectorAll('.view-certificate-btn').forEach(button => {
+            document.querySelectorAll('.view-certificate-btn, .view-grades-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     const pdfPath = this.getAttribute('data-pdf');
                     const videoPath = this.getAttribute('data-video');
                     
                     if (pdfPath) {
-                        // C'est un PDF
+                        currentPdfSrc = pdfPath;
                         pdfViewer.src = pdfPath;
                         pdfModal.style.display = 'block';
                         document.body.style.overflow = 'hidden';
+                        if (downloadLink) {
+                            downloadLink.href = pdfPath;
+                        }
                     } else if (videoPath) {
-                        // C'est une vidéo
                         videoPlayer.src = videoPath;
                         videoModal.style.display = 'block';
                         document.body.style.overflow = 'hidden';
